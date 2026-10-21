@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>35 Days Across Italy</title>
+  <meta name="description" content="35 marathons in 35 days across Italy to raise money for Fundacja Twarze Depresji.">
+  <meta property="og:title" content="35 Days Across Italy">
+  <meta property="og:description" content="35 marathons in 35 days across Italy to raise money for Fundacja Twarze Depresji.">
+  <meta property="og:image" content="img/hero.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="wordmark" aria-label="35 Days Across Italy">
+        <span class="wordmark-num">35</span>
+        <span class="wordmark-text">Days Across<br>Italy</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#challenge" data-i18n="nav.challenge">Challenge</a>
+        <a href="#route" data-i18n="nav.route">Route</a>
+        <a href="#donate" data-i18n="nav.donate">Donate</a>
+        <a href="#partners" data-i18n="nav.partners">Partners</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="pl">PL</button>
+          <button type="button" data-lang="it">IT</button>
+        </div>
+        <a href="#donate" class="btn btn-accent btn-sm header-donate" data-i18n="cta.donate">Donate</a>
+        <button type="button" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero dark">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hashtag" data-config="hashtag">#35DaysAcrossItaly</p>
+          <h1 class="hero-title">
+            <span class="hero-name" data-config="name">[YOUR NAME]</span>
+            <span class="hero-tagline" data-i18n="hero.tagline">35 marathons.<br>35 days. Italy.</span>
+          </h1>
+          <p class="hero-lead" data-i18n="hero.lead">From the Alps to the tip of the boot: I'll run a full marathon every single day to raise money for Fundacja Twarze Depresji and show that depression has many faces.</p>
+          <div class="hero-ctas">
+            <a href="#donate" class="btn btn-accent" data-i18n="cta.donate">Donate</a>
+            <a href="#route" class="btn btn-ghost" data-i18n="cta.route">See the route</a>
+          </div>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="countdown-label" id="countdown-label" data-i18n="countdown.before">Start in</div>
+            <div class="countdown-units" id="countdown-units">
+              <div><b id="cd-days">--</b><span data-i18n="countdown.days">days</span></div>
+              <div><b id="cd-hours">--</b><span data-i18n="countdown.hours">hours</span></div>
+              <div><b id="cd-mins">--</b><span data-i18n="countdown.minutes">min</span></div>
+            </div>
+            <div class="countdown-status" id="countdown-status" hidden></div>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="img/hero.svg" alt="" data-i18n-alt="hero.photoAlt">
+        </figure>
+      </div>
+      <div class="tricolore" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <!-- ============ CHALLENGE / STATS ============ -->
+    <section class="section" id="challenge">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="kicker" data-i18n="challenge.kicker">The challenge</span>
+          <span data-i18n="challenge.title">One country. One marathon a day.</span>
+        </h2>
+        <div class="stats">
+          <div class="stat reveal"><b class="stat-num">35</b><span data-i18n="stats.days">days</span></div>
+          <div class="stat reveal"><b class="stat-num">35</b><span data-i18n="stats.marathons">marathons</span></div>
+          <div class="stat reveal"><b class="stat-num">42.2</b><span data-i18n="stats.perDay">km every day</span></div>
+          <div class="stat reveal"><b class="stat-num" id="stat-total">1477</b><span data-i18n="stats.total">km in total</span></div>
+        </div>
+        <p class="section-lead" data-i18n="challenge.lead">No rest days. Heat, hills, sore legs and 35 sunrises in a row. Every kilometre is a step against the silence that surrounds depression.</p>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / WHY ============ -->
+    <section class="section alt" id="about">
+      <div class="container split">
+        <figure class="about-photo">
+          <img src="img/about.svg" alt="" data-i18n-alt="about.photoAlt">
+        </figure>
+        <div>
+          <h2 class="section-title">
+            <span class="kicker" data-i18n="about.kicker">Who I am</span>
+            <span data-i18n="about.title">Why I'm running</span>
+          </h2>
+          <!-- PLACEHOLDER: replace the about.story text in js/i18n.js with your own story -->
+          <p data-i18n="about.story">[Your story goes here: who you are, how you got into running, and why this cause matters to you. Two or three short, honest paragraphs work best.]</p>
+          <div class="foundation-card">
+            <h3 data-i18n="foundation.title">Fundacja Twarze Depresji</h3>
+            <p data-i18n="foundation.text">The "Faces of Depression" Foundation fights the stigma around depression in Poland. It runs awareness campaigns, supports people living with depression and their families, and helps them find professional help.</p>
+            <a href="#" class="link-arrow" data-config-href="foundationUrl" target="_blank" rel="noopener" data-i18n="foundation.link">Visit the foundation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROUTE ============ -->
+    <section class="section" id="route">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="kicker" data-i18n="route.kicker">The route</span>
+          <span data-i18n="route.title">From the Alps to the sea</span>
+        </h2>
+        <p class="section-lead" data-i18n="route.lead">Tap a stage to zoom in. The route may change slightly as the plan comes together.</p>
+        <div class="route-wrap">
+          <div id="map" class="map" role="region" aria-label="Route map"></div>
+          <aside class="stages">
+            <div class="stages-head">
+              <span data-i18n="route.stages">Stages</span>
+              <button type="button" class="link-btn" id="show-all" data-i18n="route.showAll">Show all</button>
+            </div>
+            <ol class="stage-list" id="stage-list"></ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DONATE ============ -->
+    <section class="section dark donate" id="donate">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="kicker" data-i18n="donate.kicker">Support the run</span>
+          <span data-i18n="donate.title">Every kilometre counts</span>
+        </h2>
+        <p class="section-lead" data-i18n="donate.lead">100% of donations go directly to Fundacja Twarze Depresji. I cover all the costs of the run myself.</p>
+
+        <div class="progress" id="progress" hidden>
+          <div class="progress-figures">
+            <span><b id="raised">0</b> PLN <span data-i18n="donate.raised">raised</span></span>
+            <span><span data-i18n="donate.goal">goal</span> <b id="goal">0</b> PLN</span>
+          </div>
+          <div class="progress-bar"><span id="progress-fill"></span></div>
+        </div>
+
+        <div class="tiers">
+          <a class="tier" href="#" data-config-href="donateUrl" target="_blank" rel="noopener">
+            <b><span data-tier="km">10</span> PLN</b>
+            <span data-i18n="donate.tierKm">sponsors 1 kilometre</span>
+          </a>
+          <a class="tier" href="#" data-config-href="donateUrl" target="_blank" rel="noopener">
+            <b><span data-tier="marathon">422</span> PLN</b>
+            <span data-i18n="donate.tierMarathon">sponsors a whole marathon</span>
+          </a>
+          <a class="tier" href="#" data-config-href="donateUrl" target="_blank" rel="noopener">
+            <b data-i18n="donate.tierAny">Any amount</b>
+            <span data-i18n="donate.tierAnyText">keeps me going</span>
+          </a>
+        </div>
+        <a href="#" class="btn btn-accent btn-lg" data-config-href="donateUrl" target="_blank" rel="noopener" data-i18n="cta.donateNow">Donate now</a>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="section alt" id="partners">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="kicker" data-i18n="partners.kicker">Partners</span>
+          <span data-i18n="partners.title">Become a partner of my run</span>
+        </h2>
+        <p class="section-lead" data-i18n="partners.lead">Looking for brands and people who want to stand with me: gear, nutrition, physio, support vehicle or accommodation along the route. Let's talk.</p>
+        <!-- PLACEHOLDER: replace these tiles with partner logos (<img src="img/partner-x.png" alt="Partner X">) -->
+        <div class="logo-grid">
+          <div class="logo-slot" data-i18n="partners.slot">Your logo</div>
+          <div class="logo-slot" data-i18n="partners.slot">Your logo</div>
+          <div class="logo-slot" data-i18n="partners.slot">Your logo</div>
+          <div class="logo-slot" data-i18n="partners.slot">Your logo</div>
+        </div>
+        <a href="#contact" class="btn btn-dark" data-i18n="cta.partner">Become a partner</a>
+      </div>
+    </section>
+
+    <!-- ============ FOLLOW + CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container split">
+        <div>
+          <h2 class="section-title">
+            <span class="kicker" data-i18n="follow.kicker">Follow along</span>
+            <span data-config="hashtag">#35DaysAcrossItaly</span>
+          </h2>
+          <p data-i18n="follow.lead">Daily updates, photos and Strava logs from the road. Come and run a few kilometres with me if I'm passing through your town!</p>
+          <ul class="socials">
+            <li><a href="#" data-config-href="social.instagram" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" data-config-href="social.strava" target="_blank" rel="noopener">Strava</a></li>
+            <li><a href="#" data-config-href="social.facebook" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+          <p class="contact-email"><span data-i18n="contact.emailLabel">Email</span>: <a href="#" id="contact-email-link" data-config="email">[your@email.com]</a></p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <h3 data-i18n="contact.title">Write to me</h3>
+          <label><span data-i18n="contact.name">Name</span><input type="text" name="name" required></label>
+          <label><span data-i18n="contact.email">Your email</span><input type="email" name="email" required></label>
+          <label><span data-i18n="contact.message">Message</span><textarea name="message" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn-accent" data-i18n="contact.send">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer dark">
+    <div class="tricolore" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container footer-inner">
+      <div>
+        <a href="#top" class="wordmark">
+          <span class="wordmark-num">35</span>
+          <span class="wordmark-text">Days Across<br>Italy</span>
+        </a>
+        <p class="footer-note" data-i18n="footer.note">A charity run for Fundacja Twarze Depresji.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#challenge" data-i18n="nav.challenge">Challenge</a>
+        <a href="#route" data-i18n="nav.route">Route</a>
+        <a href="#donate" data-i18n="nav.donate">Donate</a>
+        <a href="#partners" data-i18n="nav.partners">Partners</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="pl">PL</button>
+        <button type="button" data-lang="it">IT</button>
+      </div>
+    </div>
+    <p class="container copyright">© <span id="year"></span> <span data-config="name">[YOUR NAME]</span></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

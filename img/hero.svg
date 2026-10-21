@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- PLACEHOLDER: replace with your own photo (e.g. img/hero.jpg) and update the src in index.html -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4250"/><stop offset="1" stop-color="#20252b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <circle cx="590" cy="250" r="90" fill="#e8b04a" opacity=".85"/>
+  <path d="M0 640 L140 470 L250 580 L380 380 L520 560 L640 450 L800 610 L800 1000 L0 1000Z" fill="#2c333c"/>
+  <path d="M0 760 L180 620 L330 720 L470 600 L620 700 L800 640 L800 1000 L0 1000Z" fill="#171b20"/>
+  <path d="M120 1000 C 300 860, 360 820, 420 700" stroke="#d6263b" stroke-width="10" fill="none" stroke-dasharray="2 22" stroke-linecap="round"/>
+  <text x="400" y="930" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#ffffff" opacity=".55">YOUR PHOTO HERE</text>
+</svg>
