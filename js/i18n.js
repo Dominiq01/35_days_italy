@@ -18,7 +18,7 @@ const TRANSLATIONS = {
 
     "hero.tagline": "35 marathons.<br>35 days. Italy.",
     "hero.lead": "From Melito di Porto Salvo, the southernmost tip of mainland Italy, to Como at the foot of the Alps: a full marathon every day for 35 days, for free psychological help from Fundacja Twarze Depresji.",
-    "hero.photoAlt": "Runner on the road",
+    "hero.photoAlt": "Dominik Wędzina with his Cracovia Marathon medal",
 
     "countdown.before": "Start in",
     "countdown.days": "days",
@@ -40,7 +40,8 @@ const TRANSLATIONS = {
     "about.kicker": "Who I am",
     "about.title": "Why I'm running",
     "about.story": "[Your story goes here: who you are, how you got into running, and why this cause matters to you. Two or three short, honest paragraphs work best.]",
-    "about.photoAlt": "Portrait",
+    "about.videoLabel": "Video: who I am and why I run",
+    "about.videoSoon": "Video coming soon",
 
     "foundation.title": "Fundacja Twarze Depresji",
     "foundation.text": "The \"Faces of Depression\" Foundation runs Poland's longest-standing public campaign about depression, \"Twarze depresji. Nie oceniam. Akceptuję\" (I don't judge. I accept), and gives people free professional help.",
@@ -129,7 +130,7 @@ const TRANSLATIONS = {
     "partners.slotCamper": "Camper partner",
     "partners.slotGear": "Gear partner",
     "partners.slotFood": "Nutrition partner",
-    "contact.lead": "Write or call. I reply personally, usually the same day. I speak Polish, Italian and English.",
+    "contact.lead": "Write to me. I reply personally, usually the same day. I speak Polish, Italian and English.",
     "contact.phoneLabel": "Phone",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copy",
@@ -152,7 +153,7 @@ const TRANSLATIONS = {
 
     "hero.tagline": "35 maratonów.<br>35 dni. Włochy.",
     "hero.lead": "Z Melito di Porto Salvo, najdalej wysuniętego na południe punktu kontynentalnych Włoch, do Como u stóp Alp: pełny maraton codziennie przez 35 dni, dla bezpłatnej pomocy psychologicznej Fundacji Twarze Depresji.",
-    "hero.photoAlt": "Biegacz na trasie",
+    "hero.photoAlt": "Dominik Wędzina z medalem Cracovia Maratonu",
 
     "countdown.before": "Start za",
     "countdown.days": "dni",
@@ -174,7 +175,8 @@ const TRANSLATIONS = {
     "about.kicker": "Kim jestem",
     "about.title": "Dlaczego biegnę",
     "about.story": "[Tu wpisz swoją historię: kim jesteś, jak zaczęła się Twoja przygoda z bieganiem i dlaczego ta sprawa jest dla Ciebie ważna. Najlepiej sprawdzą się dwa, trzy krótkie i szczere akapity.]",
-    "about.photoAlt": "Portret",
+    "about.videoLabel": "Film: kim jestem i dlaczego biegnę",
+    "about.videoSoon": "Film już wkrótce",
 
     "foundation.title": "Fundacja Twarze Depresji",
     "foundation.text": "Fundacja Twarze Depresji prowadzi najstarszą w Polsce kampanię społeczną o depresji „Twarze depresji. Nie oceniam. Akceptuję” i zapewnia bezpłatną, profesjonalną pomoc.",
@@ -263,7 +265,7 @@ const TRANSLATIONS = {
     "partners.slotCamper": "Partner kampera",
     "partners.slotGear": "Partner sprzętowy",
     "partners.slotFood": "Partner żywieniowy",
-    "contact.lead": "Napisz albo zadzwoń. Odpowiadam osobiście, zwykle tego samego dnia. Mówię po polsku, włosku i angielsku.",
+    "contact.lead": "Napisz do mnie. Odpowiadam osobiście, zwykle tego samego dnia. Mówię po polsku, włosku i angielsku.",
     "contact.phoneLabel": "Telefon",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Kopiuj",
@@ -286,7 +288,7 @@ const TRANSLATIONS = {
 
     "hero.tagline": "35 maratone.<br>35 giorni. Italia.",
     "hero.lead": "Da Melito di Porto Salvo, la punta più a sud dell'Italia continentale, fino a Como ai piedi delle Alpi: una maratona completa ogni giorno per 35 giorni, per il supporto psicologico gratuito della Fondazione Twarze Depresji.",
-    "hero.photoAlt": "Runner in strada",
+    "hero.photoAlt": "Dominik Wędzina con la medaglia della Maratona di Cracovia",
 
     "countdown.before": "Si parte tra",
     "countdown.days": "giorni",
@@ -308,7 +310,8 @@ const TRANSLATIONS = {
     "about.kicker": "Chi sono",
     "about.title": "Perché corro",
     "about.story": "[Qui va la tua storia: chi sei, come hai iniziato a correre e perché questa causa è importante per te. Due o tre paragrafi brevi e sinceri funzionano meglio.]",
-    "about.photoAlt": "Ritratto",
+    "about.videoLabel": "Video: chi sono e perché corro",
+    "about.videoSoon": "Video in arrivo",
 
     "foundation.title": "Fundacja Twarze Depresji",
     "foundation.text": "La Fondazione \"Volti della Depressione\" porta avanti la più longeva campagna sociale polacca sulla depressione, \"Twarze depresji. Nie oceniam. Akceptuję\" (Non giudico. Accetto), e offre aiuto professionale gratuito.",
@@ -397,7 +400,7 @@ const TRANSLATIONS = {
     "partners.slotCamper": "Partner camper",
     "partners.slotGear": "Partner tecnico",
     "partners.slotFood": "Partner alimentare",
-    "contact.lead": "Scrivimi o chiamami. Rispondo personalmente, di solito in giornata. Parlo polacco, italiano e inglese.",
+    "contact.lead": "Scrivimi. Rispondo personalmente, di solito in giornata. Parlo polacco, italiano e inglese.",
     "contact.phoneLabel": "Telefono",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copia",
@@ -436,6 +439,9 @@ const I18N = (() => {
     });
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
       el.alt = t(el.dataset.i18nAlt);
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      el.setAttribute("aria-label", t(el.dataset.i18nAria));
     });
     document.querySelectorAll(".lang-switch button").forEach((btn) => {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === current));

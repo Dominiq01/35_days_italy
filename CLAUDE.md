@@ -26,18 +26,29 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - Fundacja Twarze Depresji (Warszawa, KRS 0000743128, twarzedepresji.pl) dała na razie tylko wstępną zgodę.
 - Podgląd artefaktu na claude.ai nie ładuje kafelków OSM; lokalnie i na hostingu mapa działa.
 
-## Następne kroki (kolejność proponowana)
-1. Skrypt filmu 60–90 s „kim jestem i dlaczego biegnę” do sekcji O mnie (PL/IT/EN napisy).
-2. Uzupełnić dane osobowe w `CONFIG` i historię `about.story`.
+## Sesja 22.10.2026 w Claude Code: co zrobiono
+- Prawdziwa trasa: 35 plików Komoot scalone do `gpx/route.gpx` (1480 km). Dzień 35 (Biassono – Como) ma celowo tylko 33,7 km; Dominik jeszcze się nad tym zastanawia, na razie nic nie zmieniać.
+- Górny pasek: w PL/IT etykiety się zawijały. Teraz `white-space: nowrap`, a `initNav()` w `main.js` sam przełącza na hamburgera (klasa `.is-compact`), gdy menu się nie mieści. Nie ma już stałego breakpointu 980px.
+- Dane w `CONFIG`: imię, e-mail, Instagram, Strava. Telefon/WhatsApp/Facebook = `null` (ukryte przez `data-config-if`). Tekst kontaktu „Napisz do mnie” (bez „zadzwoń”). Zdanie „Mówię po polsku, włosku i angielsku” potwierdzone przez Dominika.
+- Hashtag w sekcji kontaktu i e-mail w karcie nie łamią się już w środku (container queries).
+- Sekcja „Dlaczego biegnę”: zamiast zdjęcia **pionowe wideo 9:16 jako plik MP4** (nie YouTube; decyzja Dominika), `CONFIG.aboutVideo`. Napisy `.vtt` przełączają się z językiem strony. Do czasu nagrania zaślepka „Film już wkrótce”. Kod odtwarzacza nie był jeszcze testowany z prawdziwym plikiem.
+- Hero: zdjęcie Dominika (`img/hero.jpg`, `hero-800.jpg`) zrobione z `img/me.jpeg`: odbite (selfie było lustrzane), krawędzie oczyszczone, tło = gradient strony. Na telefonie kadr kwadratowy. `img/me.jpeg` to oryginał, strona go nie używa (do decyzji: usunąć z repo?).
+- Podgląd zrzutów: headless Chrome na Windows ma minimalną szerokość okna 500px; widok telefonu sprawdzać przez iframe 390px.
+
+## Gdzie skończyliśmy / następne kroki
+1. **Historia `about.story` (EN/PL/IT)**: czekamy na odpowiedzi Dominika: wiek, skąd jest, czym się zajmuje; od kiedy biega i co przebiegł (m.in. Cracovia Maraton, jest medal na zdjęciu); dlaczego depresja i Fundacja Twarze Depresji (czy coś osobistego do pokazania publicznie); dlaczego Włochy. Z tych samych odpowiedzi powstanie skrypt filmu.
+2. Skrypt filmu 60–90 s „kim jestem i dlaczego biegnę” (pionowy, napisy PL/IT/EN jako `.vtt`).
 3. Szablon maila do sponsorów (PL i IT), osobna wersja do firm wynajmujących kampery.
 4. Media kit PDF (2–3 strony, ta sama treść co strona).
-5. Prawdziwy GPX i deploy.
+5. Deploy (Netlify/Vercel).
 
 ## Do zrobienia
-- [ ] Podmienić `gpx/route.gpx` (teraz PRZYKŁADOWA, wygenerowana trasa Melito → Como, 35 etapów, 1477 km) na prawdziwy scalony plik GPX
-- [ ] Uzupełnić `CONFIG` w `js/main.js`: imię i nazwisko, e-mail, telefon, WhatsApp, social media; link do zbiórki i cel, gdy będą
+- [x] Podmienić `gpx/route.gpx` na prawdziwą trasę (22.10.2026: scalone 35 plików Komoot `gpx/IT_D01…IT_D35`, ciągła trasa, 1480 km; nazwy etapów „Day N: A – B” wpisane ręcznie, wysokości pominięte, bo strona ich nie używa)
+- [x] Uzupełnić `CONFIG` w `js/main.js` (22.10.2026): Dominik Wędzina, dominik.wedzina@onet.pl, Instagram, Strava. **Bez telefonu i WhatsAppa** (Dominik boi się spamu) i bez Facebooka: wartości `null`, a elementy z `data-config-if` się chowają
+- [ ] Link do zbiórki i cel w `CONFIG`, gdy będą
 - [ ] Napisać historię `about.story` w `js/i18n.js` (EN/PL/IT)
-- [ ] Dodać zdjęcia zamiast `img/hero.svg` i `img/about.svg`
+- [x] Zdjęcie w hero (22.10.2026): `img/hero.jpg` + `hero-800.jpg` z `img/me.jpeg` (selfie z iPhone'a po Cracovia Maratonie, wycięte). Odbite lustrzanie (było odwrócone), krawędzie oczyszczone, tło zamienione na gradient w kolorach strony. Docelowo lepiej zdjęcie w biegu, bez okularów
+- [ ] Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
 - [ ] Pokazać fundacji opis i zapytać o zgodę na użycie nazwy/logo (`foundationUrl` poprawiony na twarzedepresji.pl)
 - [ ] Nagrać film 60–90 s „kim jestem i dlaczego biegnę” (skrypt do przygotowania)
 - [ ] Korekta tekstów PL i IT przez native speakera

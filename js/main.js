@@ -2,12 +2,12 @@
  * CONFIG: edit these values. Anything in [BRACKETS] is a placeholder.
  * ============================================================ */
 const CONFIG = {
-  name: "[YOUR NAME]",
+  name: "Dominik Wędzina",
   startDate: "2027-04-19T07:00:00+02:00",      // day 1 start in Melito di Porto Salvo (Italian time)
   days: 35,
-  email: "[your@email.com]",                   // PLACEHOLDER
-  phone: "[+39 000 000 0000]",                 // PLACEHOLDER
-  whatsapp: "[+39 000 000 0000]",              // PLACEHOLDER
+  email: "dominik.wedzina@onet.pl",
+  phone: null,                                 // null hides the row in Contact
+  whatsapp: null,                              // null hides the row in Contact
   donateUrl: null,                             // fundraiser link from the foundation; while null, the Donate section and menu link stay hidden
   foundationUrl: "https://twarzedepresji.pl",
   goalPln: 35000,                              // set to null to hide the progress bar
@@ -15,11 +15,16 @@ const CONFIG = {
   kmPricePln: 10,                              // "sponsor 1 km" amount
   hashtag: "#35DaysAcrossItaly",
   social: {
-    instagram: "https://instagram.com/",       // PLACEHOLDER
-    strava: "https://www.strava.com/",         // PLACEHOLDER
-    facebook: "https://facebook.com/"          // PLACEHOLDER
+    instagram: "https://www.instagram.com/dominik.wedzina/",
+    strava: "https://strava.app.link/zRdxLFsIr7b",
+    facebook: null                               // null hides the link
   },
-  gpxPath: "gpx/route.gpx"
+  gpxPath: "gpx/route.gpx",
+  aboutVideo: {
+    src: null,                                 // e.g. "video/about.mp4" (vertical 9:16); while null a "coming soon" placeholder is shown
+    poster: null,                              // optional still frame, e.g. "video/about-poster.jpg"
+    subtitles: { pl: "video/about-pl.vtt", en: "video/about-en.vtt", it: "video/about-it.vtt" }
+  }
 };
 
 const COLORS = { a: "#d6263b", b: "#009246", ink: "#20252b" };
@@ -40,6 +45,8 @@ function applyConfig() {
     const value = getPath(CONFIG, el.dataset.configHref);
     if (value) el.href = value;
   });
+  // Optional contact rows / social links disappear when their CONFIG value is null
+  document.querySelectorAll("[data-config-if]").forEach((el) => { el.hidden = !getPath(CONFIG, el.dataset.configIf); });
   // Donate section and menu links appear only once there is a fundraiser link
   document.querySelectorAll("[data-donate-only]").forEach((el) => { el.hidden = !CONFIG.donateUrl; });
   $("#year").textContent = new Date().getFullYear();
@@ -86,6 +93,30 @@ function renderCountdown() {
     label.textContent = CONFIG.hashtag;
     status.textContent = I18N.t("countdown.after");
   }
+}
+
+/* ---------- About video ---------- */
+function initAboutVideo() {
+  const { src, poster, subtitles } = CONFIG.aboutVideo;
+  if (!src) return;  // keep the "coming soon" placeholder
+  const video = $(".about-video video");
+  video.src = src;
+  if (poster) video.poster = poster;
+  const labels = { pl: "Polski", en: "English", it: "Italiano" };
+  Object.entries(subtitles || {}).forEach(([lang, file]) => {
+    const track = document.createElement("track");
+    Object.assign(track, { kind: "subtitles", srclang: lang, label: labels[lang] || lang, src: file });
+    video.appendChild(track);
+  });
+  video.hidden = false;
+  $(".about-video .video-soon").hidden = true;
+  showSubtitles();
+}
+
+/* Subtitles follow the page language */
+function showSubtitles() {
+  const video = $(".about-video video");
+  Array.from(video.textTracks).forEach((t) => { t.mode = t.language === I18N.lang ? "showing" : "disabled"; });
 }
 
 /* ---------- GPX ---------- */
@@ -261,6 +292,27 @@ function initNav() {
   };
   toggle.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
   nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+
+  /* Collapse to the hamburger whenever the full menu doesn't fit on one line (PL/IT labels are longer than EN). */
+  const header = $(".site-header");
+  const inner = $(".header-inner");
+  const actions = $(".header-actions");
+  const fit = () => {
+    header.classList.add("is-measuring");
+    header.classList.remove("is-compact");
+    const edge = inner.getBoundingClientRect().right - parseFloat(getComputedStyle(inner).paddingRight);
+    const compact = actions.getBoundingClientRect().right > edge + 0.5;
+    header.classList.toggle("is-compact", compact);
+    if (!compact) setOpen(false);
+    void header.offsetWidth;  // apply the final state before transitions come back
+    header.classList.remove("is-measuring");
+  };
+  let frame = 0;
+  window.addEventListener("resize", () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(fit); });
+  document.addEventListener("langchange", fit);
+  window.addEventListener("load", fit);
+  if (document.fonts) document.fonts.addEventListener("loadingdone", fit);  // web fonts are wider than the fallback
+  fit();
 }
 
 function initReveal() {
@@ -294,6 +346,7 @@ function initCopyButtons() {
 /* ---------- boot ---------- */
 document.addEventListener("langchange", () => {
   renderCountdown();
+  showSubtitles();
   renderDonate();
   if (RouteMap.stages.length) {
     RouteMap.renderList();
@@ -303,6 +356,7 @@ document.addEventListener("langchange", () => {
 });
 
 applyConfig();
+initAboutVideo();
 I18N.init();
 initNav();
 initReveal();

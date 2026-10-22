@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-  <!-- PLACEHOLDER: replace with a photo of you (e.g. img/about.jpg) and update the src in index.html -->
-  <rect width="800" height="800" fill="#e9ebee"/>
-  <circle cx="400" cy="320" r="120" fill="#c9ced5"/>
-  <path d="M170 800 C 190 590, 300 500, 400 500 C 500 500, 610 590, 630 800Z" fill="#c9ced5"/>
-  <text x="400" y="740" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="#20252b" opacity=".45">YOUR PHOTO HERE</text>
-</svg>
