@@ -35,6 +35,7 @@ body {
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
 a { color: inherit; }
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; }
 p { margin: 0 0 1em; }
@@ -265,6 +266,52 @@ p { margin: 0 0 1em; }
 .leaflet-popup-content { font-family: var(--font-body); font-size: 0.95rem; }
 .leaflet-popup-content b { font-family: var(--font-display); }
 
+/* ============ Foundation extras ============ */
+.foundation-list { margin: 0 0 14px; padding-left: 1.1em; color: var(--ink-soft); }
+.foundation-list li { margin-bottom: 6px; }
+.foundation-list li::marker { color: var(--accent); }
+.foundation-note { font-weight: 700; color: var(--ink); }
+
+/* ============ Needs ============ */
+.camper {
+  display: grid; margin: 12px 0 28px; border-radius: var(--radius); overflow: hidden;
+  background: var(--ink); color: var(--on-dark); box-shadow: 0 20px 40px rgba(32,37,43,.18);
+}
+@media (min-width: 900px) { .camper { grid-template-columns: 1.4fr 1fr; } }
+.camper > * { min-width: 0; }
+.camper-main { padding: 32px; border-top: 6px solid var(--accent); }
+.camper-flag {
+  display: inline-block; background: var(--accent); color: #fff; border-radius: 999px; padding: 6px 14px;
+  font-family: var(--font-display); font-weight: 800; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.camper-main h3 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; margin: 16px 0 12px; }
+.camper-main p { color: var(--on-dark-soft); max-width: 56ch; margin: 0; }
+.camper-spec { margin: 0; padding: 24px 32px; background: var(--ink-2); display: grid; align-content: center; }
+.camper-spec div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+.camper-spec div:last-child { border-bottom: 0; }
+.camper-spec dt { font-family: var(--font-display); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-soft); }
+.camper-spec dd { margin: 0; font-weight: 700; text-align: right; }
+
+.needs-grid { display: grid; gap: 16px; margin-bottom: 36px; }
+@media (min-width: 640px) { .needs-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .needs-grid { grid-template-columns: repeat(3, 1fr); } }
+.need-card { background: var(--paper); border-radius: var(--radius); padding: 22px; border-top: 4px solid var(--ink); min-width: 0; }
+.need-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.need-card h3 { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; }
+.need-card p { color: var(--ink-soft); margin: 0; font-size: 0.97rem; }
+.need-tag {
+  flex-shrink: 0; border: 2px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 2px 10px;
+  font-family: var(--font-display); font-weight: 800; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* ============ Benefits ============ */
+.benefits { display: grid; gap: 0 48px; margin-top: 12px; }
+@media (min-width: 800px) { .benefits { grid-template-columns: repeat(2, 1fr); } }
+.benefit { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,.14); }
+.benefit-num { font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; color: var(--accent); line-height: 1; }
+.benefit h3 { font-size: 1.1rem; font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
+.benefit p { color: var(--on-dark-soft); margin: 0; }
+
 /* ============ Donate ============ */
 .donate { text-align: center; }
 .donate .section-title, .donate .section-lead { margin-left: auto; margin-right: auto; }
@@ -292,7 +339,9 @@ p { margin: 0 0 1em; }
   aspect-ratio: 3 / 2; display: grid; place-items: center;
   border: 2px dashed #c9ced5; border-radius: var(--radius);
   color: #9aa2ad; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;
+  text-align: center; padding: 12px;
 }
+.logo-slot-first { border-color: var(--accent); color: var(--accent); }
 
 /* ============ Follow + contact ============ */
 #contact .section-title > span:last-child { font-size: clamp(1.7rem, 6vw, 3.4rem); overflow-wrap: anywhere; }
@@ -304,14 +353,22 @@ p { margin: 0 0 1em; }
 .socials a:hover { background: var(--ink); color: #fff; }
 .contact-email a { font-weight: 700; color: var(--accent); }
 
-.contact-form { background: var(--paper-alt); padding: 28px; border-radius: var(--radius); display: grid; gap: 16px; }
-.contact-form h3 { font-size: 1.4rem; font-weight: 900; text-transform: uppercase; }
-.contact-form label { display: grid; gap: 6px; font-weight: 700; font-size: 0.9rem; }
-.contact-form input, .contact-form textarea {
-  font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); width: 100%;
+.contact-card { background: var(--paper); padding: 28px; border-radius: var(--radius); box-shadow: 0 8px 24px rgba(32,37,43,.06); }
+.contact-card h3 { font-size: 1.4rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+.contact-card > p { color: var(--ink-soft); }
+.channels { margin: 20px 0 0; }
+.channel {
+  display: grid; grid-template-columns: 100px 1fr auto; align-items: center; gap: 12px;
+  padding: 14px 0; border-top: 1px solid var(--line);
 }
-.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
-.contact-form .btn { justify-self: start; }
+.channel dt { font-family: var(--font-display); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.channel dd { margin: 0; font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; min-width: 0; }
+.copy-btn {
+  background: none; border: 2px solid var(--ink); border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  font-family: var(--font-display); font-weight: 800; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
+}
+.copy-btn:hover { background: var(--ink); color: #fff; }
+@media (max-width: 480px) { .channel { grid-template-columns: 1fr auto; } .channel dt { grid-column: 1 / -1; } }
 
 /* ============ Footer ============ */
 .site-footer { padding-bottom: 24px; }

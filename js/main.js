@@ -3,11 +3,13 @@
  * ============================================================ */
 const CONFIG = {
   name: "[YOUR NAME]",
-  startDate: "2027-05-01T07:00:00+02:00",      // PLACEHOLDER: day 1 start, with Italian timezone
+  startDate: "2027-04-19T07:00:00+02:00",      // day 1 start in Melito di Porto Salvo (Italian time)
   days: 35,
-  email: "your@email.com",                     // PLACEHOLDER
-  donateUrl: "https://example.com/donate",     // PLACEHOLDER: your fundraiser link (e.g. zrzutka.pl / siepomaga.pl)
-  foundationUrl: "https://twarzedepresji.org", // check this is the foundation's current website
+  email: "[your@email.com]",                   // PLACEHOLDER
+  phone: "[+39 000 000 0000]",                 // PLACEHOLDER
+  whatsapp: "[+39 000 000 0000]",              // PLACEHOLDER
+  donateUrl: null,                             // fundraiser link from the foundation; while null, the Donate section and menu link stay hidden
+  foundationUrl: "https://twarzedepresji.pl",
   goalPln: 35000,                              // set to null to hide the progress bar
   raisedPln: 0,                                // update as donations come in
   kmPricePln: 10,                              // "sponsor 1 km" amount
@@ -38,7 +40,8 @@ function applyConfig() {
     const value = getPath(CONFIG, el.dataset.configHref);
     if (value) el.href = value;
   });
-  $("#contact-email-link").href = `mailto:${CONFIG.email}`;
+  // Donate section and menu links appear only once there is a fundraiser link
+  document.querySelectorAll("[data-donate-only]").forEach((el) => { el.hidden = !CONFIG.donateUrl; });
   $("#year").textContent = new Date().getFullYear();
 }
 
@@ -274,13 +277,17 @@ function initReveal() {
   items.forEach((el, i) => { el.style.transitionDelay = `${i * 90}ms`; io.observe(el); });
 }
 
-function initContactForm() {
-  $("#contact-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = new FormData(e.target);
-    const subject = I18N.t("contact.subject", { name: data.get("name") });
-    const body = `${data.get("message")}\n\n${data.get("name")} <${data.get("email")}>`;
-    location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+/* Copy buttons next to email / phone / WhatsApp */
+function initCopyButtons() {
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = String(getPath(CONFIG, btn.dataset.copy) || "");
+      const done = () => {
+        btn.textContent = I18N.t("contact.copied");
+        setTimeout(() => { btn.textContent = I18N.t("contact.copy"); }, 1500);
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(value).then(done, () => {});
+    });
   });
 }
 
@@ -299,7 +306,7 @@ applyConfig();
 I18N.init();
 initNav();
 initReveal();
-initContactForm();
+initCopyButtons();
 RouteMap.init();
 $("#show-all").addEventListener("click", () => RouteMap.showAll());
 setInterval(renderCountdown, 30000);
