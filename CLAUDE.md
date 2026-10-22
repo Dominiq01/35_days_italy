@@ -18,6 +18,21 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - Kontakt: e-mail, telefon, WhatsApp z przyciskami „Kopiuj” (bez formularza mailto).
 - Trasa biegnie z południa na północ: Melito di Porto Salvo → Como, start 19.04.2027.
 
+## Stan prac (22.10.2026, przekazanie z claude.ai do Claude Code)
+- Strona została przebudowana pod sponsorów w rozmowie na claude.ai (commit „Przebudowa strony pod sponsorów…”). Wygląd: ten z repo (decyzja Dominika); treść sekcji „Czego potrzebuję” i „Co zyskujesz” przeniesiona z alternatywnej wersji.
+- Potrzeby wyprawy (ustalone z Dominikiem): kamper (wypożyczenie od firmy lub użyczenie od dealera/osoby, ok. 15.04–26.05.2027, kluczowy), kierowca kampera (szuka), paliwo/autostrady/kempingi, buty i odzież, odżywki i jedzenie, fizjo + ubezpieczenie + tracker GPS. Spanie w kamperze.
+- Zasięgi w social mediach są małe, dlatego nie pokazujemy liczb.
+- Sponsorzy: polscy i włoscy, strona w 3 językach; link do strony będzie wysyłany w mailach do sponsorów.
+- Fundacja Twarze Depresji (Warszawa, KRS 0000743128, twarzedepresji.pl) dała na razie tylko wstępną zgodę.
+- Podgląd artefaktu na claude.ai nie ładuje kafelków OSM; lokalnie i na hostingu mapa działa.
+
+## Następne kroki (kolejność proponowana)
+1. Skrypt filmu 60–90 s „kim jestem i dlaczego biegnę” do sekcji O mnie (PL/IT/EN napisy).
+2. Uzupełnić dane osobowe w `CONFIG` i historię `about.story`.
+3. Szablon maila do sponsorów (PL i IT), osobna wersja do firm wynajmujących kampery.
+4. Media kit PDF (2–3 strony, ta sama treść co strona).
+5. Prawdziwy GPX i deploy.
+
 ## Do zrobienia
 - [ ] Podmienić `gpx/route.gpx` (teraz PRZYKŁADOWA, wygenerowana trasa Melito → Como, 35 etapów, 1477 km) na prawdziwy scalony plik GPX
 - [ ] Uzupełnić `CONFIG` w `js/main.js`: imię i nazwisko, e-mail, telefon, WhatsApp, social media; link do zbiórki i cel, gdy będą
