@@ -16,7 +16,7 @@ const TRANSLATIONS = {
     "cta.route": "See the route",
     "cta.partner": "Become a partner",
 
-    "hero.tagline": "35 marathons.<br>35 days.<br><span class=\"accent\">1</span> reason.",
+    "hero.tagline": "35 marathons.<br>35 days.",
     "hero.lead": "1,500 km across Italy for people living with depression.",
     "hero.photoAlt": "Dominik Wędzina with a finisher medal in front of the Colosseum in Rome",
 
@@ -31,16 +31,16 @@ const TRANSLATIONS = {
 
     "challenge.kicker": "The challenge",
     "challenge.title": "One country. One marathon a day.",
-    "challenge.lead": "No rest days. Heat, hills, sore legs and 35 sunrises in a row. Every kilometre is a step against the silence that surrounds depression.",
+    "challenge.lead": "There won't be a single rest day. There will be mornings when I open my eyes in the camper and my first thought is “I can't do this”. There will be kilometres when my legs turn to lead and my head starts looking for an excuse to stop.<br><br>But my tiredness will be gone after a night's sleep and a plate of pasta. For someone living with depression, that feeling can last for weeks, with no finish line in sight and no one cheering by the roadside. That's why I run. And that's why I talk about it.",
 
     "stats.days": "days",
     "stats.marathons": "marathons",
-    "stats.perDay": "km every day",
+    "stats.perDay": "km a day",
     "stats.total": "km in total",
 
     "about.kicker": "Who I am",
     "about.title": "Why I'm running",
-    "about.story": "[Your story goes here: who you are, how you got into running, and why this cause matters to you. Two or three short, honest paragraphs work best.]",
+    "about.story": "I'm 25, a software developer living in Rome. I write code by day and sometimes make pizza. I've been running for almost three years and have a few marathons behind me, including the Cracovia Marathon and one in a Spider-Man costume. Now it's time for something much bigger.<br><br>Why? Because I see a lot of people around me who have struggled with depression or still live with it every day. I thought that since I run, I could use my running to do something good: help more people hear about it, and let those going through it know they're not alone.",
     "about.videoLabel": "Video: who I am and why I run",
     "about.videoSoon": "Video coming soon",
 
@@ -148,7 +148,7 @@ const TRANSLATIONS = {
     "cta.route": "Zobacz trasę",
     "cta.partner": "Zostań partnerem",
 
-    "hero.tagline": "35 maratonów.<br>35 dni.<br><span class=\"accent\">1</span> powód.",
+    "hero.tagline": "35 maratonów.<br>35 dni.",
     "hero.lead": "1500 km przez Włochy dla osób chorujących na depresję.",
     "hero.photoAlt": "Dominik Wędzina z medalem na mecie przed Koloseum w Rzymie",
 
@@ -163,16 +163,16 @@ const TRANSLATIONS = {
 
     "challenge.kicker": "Wyzwanie",
     "challenge.title": "Jeden kraj. Maraton dziennie.",
-    "challenge.lead": "Bez dni przerwy. Upał, podbiegi, zmęczone nogi i 35 wschodów słońca z rzędu. Każdy kilometr to krok przeciwko milczeniu, które otacza depresję.",
+    "challenge.lead": "Nie będzie dnia wolnego. Będą poranki, kiedy otworzę oczy w kamperze i pierwsza myśl będzie: „nie dam rady”. Będą kilometry, kiedy nogi zrobią się jak z ołowiu, a głowa zacznie szukać wymówki, żeby stanąć.<br><br>Tylko że moje zmęczenie minie po nocy snu i talerzu makaronu. U osoby z depresją ten stan potrafi trwać tygodniami, bez mety na horyzoncie i bez nikogo, kto kibicuje przy drodze. Dlatego biegnę. I dlatego o tym mówię.",
 
     "stats.days": "dni",
     "stats.marathons": "maratonów",
-    "stats.perDay": "km każdego dnia",
+    "stats.perDay": "km dziennie",
     "stats.total": "km łącznie",
 
     "about.kicker": "Kim jestem",
     "about.title": "Dlaczego biegnę",
-    "about.story": "[Tu wpisz swoją historię: kim jesteś, jak zaczęła się Twoja przygoda z bieganiem i dlaczego ta sprawa jest dla Ciebie ważna. Najlepiej sprawdzą się dwa, trzy krótkie i szczere akapity.]",
+    "about.story": "Mam 25 lat, jestem programistą i mieszkam w Rzymie. Na co dzień programuję, czasem robię pizzę. Biegam od prawie trzech lat i mam za sobą kilka maratonów, w tym Cracovia Maraton i jeden w stroju Spider-Mana. Teraz przyszła pora na coś zdecydowanie większego.<br><br>Dlaczego? Bo widzę dużo osób ze swojego otoczenia, które zmagały się z depresją albo zmagają się z nią cały czas. Pomyślałem, że skoro biegam, to mogę tym bieganiem zrobić coś dobrego. Żeby więcej osób o tym usłyszało. I żeby ci, którzy się z tym zmagają, wiedzieli, że nie są sami.",
     "about.videoLabel": "Film: kim jestem i dlaczego biegnę",
     "about.videoSoon": "Film już wkrótce",
 
@@ -280,8 +280,8 @@ const TRANSLATIONS = {
     "cta.route": "Vedi il percorso",
     "cta.partner": "Diventa partner",
 
-    "hero.tagline": "35 maratone.<br>35 giorni.<br><span class=\"accent\">1</span> motivo.",
-    "hero.lead": "1500 km attraverso l'Italia per chi soffre di depressione.",
+    "hero.tagline": "35 maratone.<br>35 giorni.",
+    "hero.lead": "1.500 km attraverso l'Italia per le persone che vivono con la depressione.",
     "hero.photoAlt": "Dominik Wędzina con la medaglia da finisher davanti al Colosseo a Roma",
 
     "countdown.before": "Si parte tra",
@@ -295,16 +295,16 @@ const TRANSLATIONS = {
 
     "challenge.kicker": "La sfida",
     "challenge.title": "Un Paese. Una maratona al giorno.",
-    "challenge.lead": "Nessun giorno di riposo. Caldo, salite, gambe stanche e 35 albe di fila. Ogni chilometro è un passo contro il silenzio che circonda la depressione.",
+    "challenge.lead": "Non ci sarà un giorno di riposo. Ci saranno mattine in cui aprirò gli occhi nel camper e il primo pensiero sarà: “non ce la faccio”. Ci saranno chilometri in cui le gambe sembreranno di piombo e la testa cercherà una scusa per fermarsi.<br><br>Ma la mia stanchezza passerà dopo una notte di sonno e un piatto di pasta. Per chi vive con la depressione quella sensazione può durare settimane, senza un traguardo all'orizzonte e senza nessuno che faccia il tifo a bordo strada. Per questo corro. E per questo ne parlo.",
 
     "stats.days": "giorni",
     "stats.marathons": "maratone",
-    "stats.perDay": "km ogni giorno",
+    "stats.perDay": "km al giorno",
     "stats.total": "km in totale",
 
     "about.kicker": "Chi sono",
     "about.title": "Perché corro",
-    "about.story": "[Qui va la tua storia: chi sei, come hai iniziato a correre e perché questa causa è importante per te. Due o tre paragrafi brevi e sinceri funzionano meglio.]",
+    "about.story": "Ho 25 anni, sono un programmatore e vivo a Roma. Di giorno scrivo codice, ogni tanto faccio la pizza. Corro da quasi tre anni e ho già alle spalle qualche maratona, tra cui la Maratona di Cracovia e una vestito da Spider-Man. Ora è il momento di qualcosa di molto più grande.<br><br>Perché? Perché vedo tante persone intorno a me che hanno vissuto la depressione o ci convivono ancora oggi. Ho pensato che, visto che corro, posso usare la corsa per fare qualcosa di buono. Perché se ne parli di più. E perché chi la sta attraversando sappia di non essere solo.",
     "about.videoLabel": "Video: chi sono e perché corro",
     "about.videoSoon": "Video in arrivo",
 
