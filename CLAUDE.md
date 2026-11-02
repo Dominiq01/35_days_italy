@@ -12,7 +12,7 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - Commity: autor `dominik.wedzina@onet.pl`.
 
 - Strona jest przede wszystkim dla **sponsorów**. Kolejność: hero (odliczanie) → wyzwanie → kim jestem + fundacja → trasa → czego potrzebuję (kamper wyróżniony) → co zyskuje partner → partnerzy → [wpłaty] → kontakt.
-- Bez pakietów sponsorskich i bez sekcji zasięgów (decyzja Dominika).
+- Bez pakietów sponsorskich i bez sekcji zasięgów (decyzja Dominika). „Co zyskujesz” ma 5 punktów (punkt „Spotkanie na trasie” usunięty). W karcie kampera nie ma pozycji „Odbiór”. Odliczanie w hero pokazuje też sekundy.
 - Kamper to warunek konieczny wyprawy (wypożyczenie od firmy lub użyczenie od osoby/dealera). Szukamy też kierowcy.
 - Sekcja wpłat i link „Wesprzyj” w menu są ukryte, dopóki `CONFIG.donateUrl` jest `null` (fundacja dała na razie wstępną zgodę, link do zbiórki jeszcze nie istnieje). Nie pisać, że Dominik sam pokrywa koszty.
 - Kontakt: e-mail, telefon, WhatsApp z przyciskami „Kopiuj” (bez formularza mailto).
@@ -32,7 +32,9 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - Dane w `CONFIG`: imię, e-mail, Instagram, Strava. Telefon/WhatsApp/Facebook = `null` (ukryte przez `data-config-if`). Tekst kontaktu „Napisz do mnie” (bez „zadzwoń”). Zdanie „Mówię po polsku, włosku i angielsku” potwierdzone przez Dominika.
 - Hashtag w sekcji kontaktu i e-mail w karcie nie łamią się już w środku (container queries).
 - Sekcja „Dlaczego biegnę”: zamiast zdjęcia **pionowe wideo 9:16 jako plik MP4** (nie YouTube; decyzja Dominika), `CONFIG.aboutVideo`. Napisy `.vtt` przełączają się z językiem strony. Do czasu nagrania zaślepka „Film już wkrótce”. Kod odtwarzacza nie był jeszcze testowany z prawdziwym plikiem.
-- Hero: zdjęcie Dominika (`img/hero.jpg`, `hero-800.jpg`) zrobione z `img/me.jpeg`: odbite (selfie było lustrzane), krawędzie oczyszczone, tło = gradient strony. Na telefonie kadr kwadratowy. `img/me.jpeg` to oryginał, strona go nie używa (do decyzji: usunąć z repo?).
+- Hero: od 22.10.2026 zdjęcie spod Koloseum w Rzymie (`img/hero.heic`, oryginał z iPhone'a, wybrane przez Dominika), wykadrowane 4:5 do `img/hero.jpg` (1280×1600) i `hero-800.jpg`. Na telefonie kadr kwadratowy (`object-position: 50% 70%`). HEIC ma obrót w metadanych: kadrować po zastosowaniu orientacji (ImageIO `CreateThumbnailWithTransform`), bo `sips` tnie surowe piksele. Stare zdjęcia (`img/me.jpeg`) usunięte.
+- Szerokość treści: `--maxw: 1440px` (wcześniej 1180px, za wąsko na laptopach), od 1200px margines boczny 48px.
+- Tytuł hero: „35 maratonów. / 35 dni. / 1 powód.” + podtytuł „1500 km przez Włochy dla osób chorujących na depresję” (decyzja Dominika). Każda linia tytułu zawsze w jednym wierszu: `white-space: nowrap` + `font-size: min(5.4rem, 10.5cqi)` względem kolumny `.hero-copy`.
 - Podgląd zrzutów: headless Chrome na Windows ma minimalną szerokość okna 500px; widok telefonu sprawdzać przez iframe 390px.
 
 ## Gdzie skończyliśmy / następne kroki
@@ -47,7 +49,7 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - [x] Uzupełnić `CONFIG` w `js/main.js` (22.10.2026): Dominik Wędzina, dominik.wedzina@onet.pl, Instagram, Strava. **Bez telefonu i WhatsAppa** (Dominik boi się spamu) i bez Facebooka: wartości `null`, a elementy z `data-config-if` się chowają
 - [ ] Link do zbiórki i cel w `CONFIG`, gdy będą
 - [ ] Napisać historię `about.story` w `js/i18n.js` (EN/PL/IT)
-- [x] Zdjęcie w hero (22.10.2026): `img/hero.jpg` + `hero-800.jpg` z `img/me.jpeg` (selfie z iPhone'a po Cracovia Maratonie, wycięte). Odbite lustrzanie (było odwrócone), krawędzie oczyszczone, tło zamienione na gradient w kolorach strony. Docelowo lepiej zdjęcie w biegu, bez okularów
+- [x] Zdjęcie w hero (22.10.2026): zdjęcie spod Koloseum z medalem, oryginał `img/hero.heic`, na stronie `img/hero.jpg` + `hero-800.jpg`
 - [ ] Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
 - [ ] Pokazać fundacji opis i zapytać o zgodę na użycie nazwy/logo (`foundationUrl` poprawiony na twarzedepresji.pl)
 - [ ] Nagrać film 60–90 s „kim jestem i dlaczego biegnę” (skrypt do przygotowania)

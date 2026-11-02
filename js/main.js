@@ -78,6 +78,7 @@ function renderCountdown() {
     $("#cd-days").textContent = Math.floor(diff / dayMs);
     $("#cd-hours").textContent = String(Math.floor((diff % dayMs) / 3600000)).padStart(2, "0");
     $("#cd-mins").textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+    $("#cd-secs").textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
     label.textContent = I18N.t("countdown.before");
     units.hidden = false;
     status.hidden = true;
@@ -363,4 +364,4 @@ initReveal();
 initCopyButtons();
 RouteMap.init();
 $("#show-all").addEventListener("click", () => RouteMap.showAll());
-setInterval(renderCountdown, 30000);
+setInterval(renderCountdown, 1000);
