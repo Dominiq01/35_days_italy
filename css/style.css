@@ -18,7 +18,7 @@
   --radius: 10px;
   --gutter: 16px;
   --maxw: 1440px;
-  --header-h: 68px;
+  --header-h: 72px;
   color-scheme: light;
 }
 
@@ -41,7 +41,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; }
 p { margin: 0 0 1em; }
 
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-@media (min-width: 768px) { :root { --gutter: 32px; } }
+@media (min-width: 768px) { :root { --gutter: 32px; --header-h: 84px; } }
 @media (min-width: 1200px) { :root { --gutter: 48px; } }
 
 .dark { background: var(--ink); color: var(--on-dark); }
@@ -114,9 +114,9 @@ p { margin: 0 0 1em; }
   color: var(--on-dark);
 }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 20px; }
-.wordmark { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--on-dark); }
-.wordmark-num { font-family: var(--font-display); font-weight: 900; font-size: 2rem; color: var(--accent); line-height: 1; }
-.wordmark-text { font-family: var(--font-display); font-weight: 800; font-size: 0.72rem; line-height: 1.15; text-transform: uppercase; letter-spacing: 0.1em; }
+.wordmark { display: flex; align-items: center; text-decoration: none; }
+.wordmark img { display: block; width: auto; height: calc(var(--header-h) - 14px); }  /* full logo, 542×350 */
+.wordmark-footer img { height: 110px; }
 
 .wordmark, .header-actions, .main-nav a, .header-donate { white-space: nowrap; flex-shrink: 0; }
 

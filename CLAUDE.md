@@ -49,7 +49,7 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - [x] Uzupełnić `CONFIG` w `js/main.js` (22.10.2026): Dominik Wędzina, dominik.wedzina@onet.pl, Instagram, Strava. **Bez telefonu i WhatsAppa** (Dominik boi się spamu) i bez Facebooka: wartości `null`, a elementy z `data-config-if` się chowają
 - [ ] Link do zbiórki i cel w `CONFIG`, gdy będą
 - [x] Historia `about.story` w `js/i18n.js` (02.11.2026, z faktów w `USTALENIA-Z-CLAUDE-AI.md`; do akceptacji przez Dominika)
-- Fundacja: Dominik nie chce się z nią na razie wiązać, ale nazwa na stronie zostaje bez zmian (decyzja 02.11.2026). Hashtag: `#Italy35Challenge` (decyzja 02.11.2026, wcześniej `#35DaysAcrossItaly`). Wordmark „35 Days Across Italy” na razie bez zmian.
+- Fundacja: Dominik nie chce się z nią na razie wiązać, ale nazwa na stronie zostaje bez zmian (decyzja 02.11.2026). Hashtag: `#Italy35Challenge` (decyzja 02.11.2026, wcześniej `#35DaysAcrossItaly`). Nazwa projektu: **Italy35 Challenge**. Logo (`img/logo/`, opis w `USTALENIA-Z-CLAUDE-AI.md` pkt 6) w nagłówku i stopce; pasek nagłówka podniesiony do 84 px (72 px poniżej 768 px), żeby pełne logo było większe (decyzja Dominika). Favicon: `italy35-logo-kwadrat-ciemny.svg`.
 - [x] Zdjęcie w hero (22.10.2026): zdjęcie spod Koloseum z medalem, oryginał `img/hero.heic`, na stronie `img/hero.jpg` + `hero-800.jpg`
 - [ ] Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
 - [ ] Pokazać fundacji opis i zapytać o zgodę na użycie nazwy/logo (`foundationUrl` poprawiony na twarzedepresji.pl)
