@@ -39,7 +39,7 @@ const TRANSLATIONS = {
 
     "about.kicker": "Who I am",
     "about.title": "Why I'm running",
-    "about.story": "I'm 25, a software developer living in Rome. I write code by day and sometimes make pizza. I've been running for almost three years and have a few marathons behind me. Now it's time for something much bigger.<br><br>Why? Because I see a lot of people around me who have struggled with depression or still live with it every day. I thought that since I run, I could use my running to do something good. I'd like more people to hear about this illness, and to show those living with it that they're not alone.",
+    "about.story": "I'm 25, a software developer living in Rome. I've been running for almost three years and have a few marathons behind me. Now it's time for something much bigger.<br><br>Why? Because I see a lot of people around me who have struggled with depression or still live with it every day. I thought that since I run, I could use my running to do something good. I'd like more people to hear about this illness, and to show those living with it that they're not alone.",
     "about.videoLabel": "Video: who I am and why I run",
     "about.videoSoon": "Video coming soon",
 
@@ -170,7 +170,7 @@ const TRANSLATIONS = {
 
     "about.kicker": "Kim jestem",
     "about.title": "Dlaczego biegnę",
-    "about.story": "Mam 25 lat, jestem programistą i mieszkam w Rzymie. Na co dzień programuję, czasem robię pizzę. Biegam od prawie trzech lat i mam za sobą kilka maratonów. Teraz przyszła pora na coś zdecydowanie większego.<br><br>Dlaczego? Bo widzę dużo osób ze swojego otoczenia, które zmagały się z depresją albo zmagają się z nią cały czas. Pomyślałem, że skoro biegam, to mogę tym bieganiem zrobić coś dobrego. Chciałbym, żeby więcej osób usłyszało o tej chorobie, i pokazać osobom chorym, że nie są sami.",
+    "about.story": "Mam 25 lat, jestem programistą i mieszkam w Rzymie. Biegam od prawie trzech lat i mam za sobą kilka maratonów. Teraz przyszła pora na coś zdecydowanie większego.<br><br>Dlaczego? Bo widzę dużo osób ze swojego otoczenia, które zmagały się z depresją albo zmagają się z nią cały czas. Pomyślałem, że skoro biegam, to mogę tym bieganiem zrobić coś dobrego. Chciałbym, żeby więcej osób usłyszało o tej chorobie, i pokazać osobom chorym, że nie są sami.",
     "about.videoLabel": "Film: kim jestem i dlaczego biegnę",
     "about.videoSoon": "Film już wkrótce",
 
@@ -301,7 +301,7 @@ const TRANSLATIONS = {
 
     "about.kicker": "Chi sono",
     "about.title": "Perché corro",
-    "about.story": "Ho 25 anni, sono un programmatore e vivo a Roma. Di giorno scrivo codice, ogni tanto faccio la pizza. Corro da quasi tre anni e ho già alle spalle qualche maratona. Ora è il momento di qualcosa di molto più grande.<br><br>Perché? Perché vedo tante persone intorno a me che hanno vissuto la depressione o ci convivono ancora oggi. Ho pensato che, visto che corro, posso usare la corsa per fare qualcosa di buono. Vorrei che più persone sentissero parlare di questa malattia e che chi ne soffre sapesse di non essere solo.",
+    "about.story": "Ho 25 anni, sono un programmatore e vivo a Roma. Corro da quasi tre anni e ho già alle spalle qualche maratona. Ora è il momento di qualcosa di molto più grande.<br><br>Perché? Perché vedo tante persone intorno a me che hanno vissuto la depressione o ci convivono ancora oggi. Ho pensato che, visto che corro, posso usare la corsa per fare qualcosa di buono. Vorrei che più persone sentissero parlare di questa malattia e che chi ne soffre sapesse di non essere solo.",
     "about.videoLabel": "Video: chi sono e perché corro",
     "about.videoSoon": "Video in arrivo",
 
