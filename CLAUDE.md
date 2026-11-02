@@ -34,7 +34,7 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - Sekcja „Dlaczego biegnę”: zamiast zdjęcia **pionowe wideo 9:16 jako plik MP4** (nie YouTube; decyzja Dominika), `CONFIG.aboutVideo`. Napisy `.vtt` przełączają się z językiem strony. Do czasu nagrania zaślepka „Film już wkrótce”. Kod odtwarzacza nie był jeszcze testowany z prawdziwym plikiem.
 - Hero: od 22.10.2026 zdjęcie spod Koloseum w Rzymie (`img/hero.heic`, oryginał z iPhone'a, wybrane przez Dominika), wykadrowane 4:5 do `img/hero.jpg` (1280×1600) i `hero-800.jpg`. Na telefonie kadr kwadratowy (`object-position: 50% 70%`). HEIC ma obrót w metadanych: kadrować po zastosowaniu orientacji (ImageIO `CreateThumbnailWithTransform`), bo `sips` tnie surowe piksele. Stare zdjęcia (`img/me.jpeg`) usunięte.
 - Szerokość treści: `--maxw: 1440px` (wcześniej 1180px, za wąsko na laptopach), od 1200px margines boczny 48px.
-- Tytuł hero: „35 maratonów. / 35 dni. / 1 powód.” + podtytuł „1500 km przez Włochy dla osób chorujących na depresję” (decyzja Dominika). Każda linia tytułu zawsze w jednym wierszu: `white-space: nowrap` + `font-size: min(5.4rem, 10.5cqi)` względem kolumny `.hero-copy`.
+- Tytuł hero (02.11.2026): „35 maratonów. / 35 dni.” bez trzeciego członu (decyzja Dominika, warianty w `USTALENIA-Z-CLAUDE-AI.md`) + podtytuł „1500 km przez Włochy dla osób chorujących na depresję” (decyzja Dominika). Każda linia tytułu zawsze w jednym wierszu: `white-space: nowrap` + `font-size: min(5.4rem, 10.5cqi)` względem kolumny `.hero-copy`.
 - Podgląd zrzutów: headless Chrome na Windows ma minimalną szerokość okna 500px; widok telefonu sprawdzać przez iframe 390px.
 
 ## Gdzie skończyliśmy / następne kroki
@@ -48,7 +48,8 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - [x] Podmienić `gpx/route.gpx` na prawdziwą trasę (22.10.2026: scalone 35 plików Komoot `gpx/IT_D01…IT_D35`, ciągła trasa, 1480 km; nazwy etapów „Day N: A – B” wpisane ręcznie, wysokości pominięte, bo strona ich nie używa)
 - [x] Uzupełnić `CONFIG` w `js/main.js` (22.10.2026): Dominik Wędzina, dominik.wedzina@onet.pl, Instagram, Strava. **Bez telefonu i WhatsAppa** (Dominik boi się spamu) i bez Facebooka: wartości `null`, a elementy z `data-config-if` się chowają
 - [ ] Link do zbiórki i cel w `CONFIG`, gdy będą
-- [ ] Napisać historię `about.story` w `js/i18n.js` (EN/PL/IT)
+- [x] Historia `about.story` w `js/i18n.js` (02.11.2026, z faktów w `USTALENIA-Z-CLAUDE-AI.md`; do akceptacji przez Dominika)
+- Fundacja: Dominik nie chce się z nią na razie wiązać, ale nazwa na stronie zostaje bez zmian (decyzja 02.11.2026). Wordmark i hashtag `#35DaysAcrossItaly` też zostają.
 - [x] Zdjęcie w hero (22.10.2026): zdjęcie spod Koloseum z medalem, oryginał `img/hero.heic`, na stronie `img/hero.jpg` + `hero-800.jpg`
 - [ ] Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
 - [ ] Pokazać fundacji opis i zapytać o zgodę na użycie nazwy/logo (`foundationUrl` poprawiony na twarzedepresji.pl)
