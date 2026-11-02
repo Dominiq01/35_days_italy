@@ -13,7 +13,7 @@ const CONFIG = {
   goalPln: 35000,                              // set to null to hide the progress bar
   raisedPln: 0,                                // update as donations come in
   kmPricePln: 10,                              // "sponsor 1 km" amount
-  hashtag: "#35DaysAcrossItaly",
+  hashtag: "#ITALY35",
   social: {
     instagram: "https://www.instagram.com/dominik.wedzina/",
     strava: "https://strava.app.link/zRdxLFsIr7b",
