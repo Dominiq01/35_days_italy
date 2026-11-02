@@ -114,3 +114,15 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
 - Bez osobistej historii depresji do pokazania publicznie. Motywacja: „widzę dużo osób ze swojego otoczenia, które zmagały się z depresją albo zmagają się z nią cały czas”.
 - Najbardziej boi się tego, że nie znajdzie sponsorów, a kamper jest warunkiem koniecznym wyprawy. Szuka też kierowcy.
 - Zasięgi w social mediach są małe, więc nie pokazujemy liczb.
+
+## 6. Nazwa projektu i logo (02.11.2026)
+
+- **Nazwa projektu: Italy35 Challenge.** Uwaga na pisownię „challenge” przez „e”. Hashtag: `#Italy35Challenge`. Nazwa zastępuje „35 Days Across Italy” w logo w nagłówku, w stopce, w hashtagu (`CONFIG.hashtag`), w `<title>` i w meta.
+- Nagłówek hero zostaje: „35 maratonów. 35 dni.” z podtytułem (punkt 1).
+- **Logo:** wybrany wariant „C3”: napis ITALY (biały/grafitowy) + 35 (czerwony `#d6263b`), pod nim falująca linia trasy od zielonego punktu startu (`#009246`) do czerwonego punktu mety, niżej „CHALLENGE” rozstrzelonymi literami. Czcionka Montserrat Black/ExtraBold, napisy zamienione na krzywe.
+- Pliki w `img/logo/`:
+  - `italy35-logo-na-ciemne-tlo.svg`: do nagłówka strony (ciemne tło). PNG 2000 i 600 px.
+  - `italy35-logo-na-jasne-tlo.svg`: na jasne tła. PNG 2000 i 600 px.
+  - `italy35-logo-kwadrat-ciemny.svg` i `italy35-logo-kwadrat-1080px.png`: ikona, social media. Można z niego zrobić favicon.
+  - `italy35-logo-jednokolorowe-biale.svg` i `…-czarne.svg`: do nadruku.
+- Logo jest dość wysokie (napis + linia + CHALLENGE). W wąskim pasku nagłówka może być za małe. W razie potrzeby zapytać Dominika, czy w nagłówku wystarczy sam napis „ITALY35” w stylu logo, a pełne logo zostawić np. w hero lub stopce.
