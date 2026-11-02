@@ -130,8 +130,7 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Phone",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copy",
-    "contact.copied": "Copied",
-    "footer.note": "A charity run for people living with depression."
+    "contact.copied": "Copied"
   },
 
   pl: {
@@ -261,8 +260,7 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Telefon",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Kopiuj",
-    "contact.copied": "Skopiowano",
-    "footer.note": "Charytatywny bieg dla osób chorujących na depresję."
+    "contact.copied": "Skopiowano"
   },
 
   it: {
@@ -392,8 +390,7 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Telefono",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copia",
-    "contact.copied": "Copiato",
-    "footer.note": "Una corsa di beneficenza per le persone che vivono con la depressione."
+    "contact.copied": "Copiato"
   }
 };
 
