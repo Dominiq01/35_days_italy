@@ -155,3 +155,13 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
 - **Po wdrożeniu na Netlify:**
   - w panelu Forms włączyć wykrywanie formularzy („Enable form detection”), jeśli jest wyłączone, i zrobić ponowny deploy,
   - ustawić powiadomienia e-mail na adres Dominika (Forms → Form notifications).
+
+## 10. Domena i powiadomienia z formularza (03.11.2026)
+
+- Strona działa pod **https://italy35.com** (domena w Cloudflare, rekordy CNAME „DNS only” do Netlify, projekt Netlify `italy35`).
+- **Powiadomienia z formularza są czytelne:**
+  - pola mają polskie nazwy („Imię i nazwisko”, „W czym może pomóc”, „Wiadomość”, „Język strony”), a wartości listy są po polsku niezależnie od języka strony,
+  - temat maila ustawia JS: „ITALY35: <imię> – <w czym pomoże>”,
+  - pole `email` MUSI zostać pod tą nazwą, bo Netlify używa go jako Reply-to.
+- Treści maila (HTML) w Netlify nie da się projektować. Ładny mail wymagałby Zapiera/n8n albo Netlify Function z serwisem mailowym.
+- Maile od formresponses@netlify.com trafiały do spamu. Dominik ma ustawić filtr w poczcie.

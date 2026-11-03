@@ -346,6 +346,11 @@ function initContactForm() {
       if (bad) bad.focus();
       return;
     }
+    // Readable subject and page language in the notification email
+    const who = $("#cf-name").value.trim();
+    const what = $("#cf-help").value;
+    $("#cf-subject").value = `ITALY35: ${who} – ${what}`;
+    $("#cf-lang").value = I18N.lang.toUpperCase();
     button.disabled = true;
     show("contact.form.sending", true);
     const body = new URLSearchParams(new FormData(form)).toString();
