@@ -457,7 +457,7 @@ p { margin: 0 0 1em; }
 .form-status.is-ok { color: var(--green); }
 .form-status.is-error { color: var(--accent-dark); }
 .hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-.contact-or { margin: 28px 0 0; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.95rem; }
+.contact-or { margin: 32px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
 .contact-or + .channels { margin-top: 8px; }
 
 /* ============ Contact: static route map ============ */
