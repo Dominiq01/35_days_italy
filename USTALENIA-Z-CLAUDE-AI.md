@@ -165,3 +165,13 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - pole `email` MUSI zostać pod tą nazwą, bo Netlify używa go jako Reply-to.
 - Treści maila (HTML) w Netlify nie da się projektować. Ładny mail wymagałby Zapiera/n8n albo Netlify Function z serwisem mailowym.
 - Maile od formresponses@netlify.com trafiały do spamu. Dominik ma ustawić filtr w poczcie.
+
+## 11. Nowe hero: mapa z trasą i polaroid (03.11.2026)
+
+- Wybrany wariant „B” z kanwy „ITALY35 hero”. Zamiast dużego zdjęcia w hero jest `figure.hero-map`:
+  - inline SVG z konturem Włoch (Natural Earth, uproszczony) i prawdziwą trasą z `gpx/route.gpx`, w tym samym układzie współrzędnych co `viewBox="20 0 520 560"`,
+  - trasa rysuje się raz po wczytaniu (`stroke-dashoffset`, ok. 4 s), potem pojawiają się punkt i napis mety; przy `prefers-reduced-motion` trasa jest od razu cała,
+  - polaroid (`.hero-polaroid`, zdjęcie `img/hero-800.jpg`) przypięty przerywaną kreską do Rzymu (punkt 278,278 w viewBox), podpis `hero.polaroid`: „To ja 👋” / „Sono io 👋” / „That's me 👋”,
+  - etykiety na mapie: `hero.mapStart`, `hero.mapFinish`, opis dla czytników `hero.mapAria`.
+- Ścieżki SVG są wygenerowane z GPX i Natural Earth. Przy zmianie trasy trzeba je przeliczyć (Claude na claude.ai ma do tego skrypt).
+- Siatka hero: `grid-template-columns: 1fr 1fr` (było 1.15fr 0.85fr).

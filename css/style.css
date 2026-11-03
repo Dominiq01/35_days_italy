@@ -171,7 +171,7 @@ p { margin: 0 0 1em; }
   padding-top: 56px; padding-bottom: 64px;
 }
 @media (min-width: 900px) {
-  .hero-inner { grid-template-columns: 1.15fr 0.85fr; padding-top: 80px; padding-bottom: 96px; }
+  .hero-inner { grid-template-columns: 1fr 1fr; padding-top: 80px; padding-bottom: 96px; }
 }
 .hashtag { font-family: var(--font-display); font-weight: 800; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 14px; }
 .hero-title { margin-bottom: 22px; }
@@ -188,9 +188,31 @@ p { margin: 0 0 1em; }
 .hero-tagline .accent { color: var(--accent); }
 .hero-lead { font-size: 1.15rem; color: var(--on-dark-soft); max-width: 52ch; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 36px; }
-.hero-photo { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }  /* keep head to feet in frame when cropped (square on phones) */
-@media (max-width: 899px) { .hero-photo { aspect-ratio: 1; } }
+/* Hero map: real route drawn once on load, polaroid pinned at Rome (viewBox coords 278,278) */
+.hero-map { position: relative; margin: 0; width: 100%; max-width: 560px; justify-self: center; }
+.hero-map-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.hero-map-land { fill: #2b3138; stroke: rgba(255,255,255,.4); stroke-width: 1.2; stroke-linejoin: round; }
+.hero-route { fill: none; stroke: var(--accent); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1; animation: hero-draw 3.6s ease-in-out .4s forwards; }
+.hero-map-start { fill: var(--green); stroke: #fff; stroke-width: 3; }
+.hero-map-finish { fill: var(--accent); stroke: #fff; stroke-width: 3; opacity: 0; animation: hero-pop .4s ease-out 3.9s forwards; }
+.hero-map-city { fill: #fff; }
+.hero-map-pin-line { stroke: #fff; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.hero-map-label { font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; fill: #fff; }
+.hero-map-label-finish { opacity: 0; animation: hero-pop .4s ease-out 3.9s forwards; }
+@keyframes hero-draw { to { stroke-dashoffset: 0; } }
+@keyframes hero-pop { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-route { animation: none; stroke-dashoffset: 0; }
+  .hero-map-finish, .hero-map-label-finish { animation: none; opacity: 1; }
+}
+.hero-polaroid {
+  position: absolute; left: 4%; top: 29%; width: 35%; box-sizing: border-box; padding: 3.2% 3.2% 3.6%;
+  background: #fff; border-radius: 3px; box-shadow: 0 18px 36px rgba(0,0,0,.45); transform: rotate(-4deg);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.hero-polaroid img { width: 100%; aspect-ratio: 9 / 10; height: auto; object-fit: cover; object-position: 50% 26%; }
+.hero-polaroid span { font-family: var(--font-body); font-style: italic; font-size: clamp(.8rem, 1.4vw, 1rem); color: var(--ink); text-align: center; line-height: 1.2; }
 
 .countdown { border-left: 4px solid var(--accent); padding-left: 16px; }
 .countdown-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--on-dark-soft); }

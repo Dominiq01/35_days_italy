@@ -16,6 +16,10 @@ const TRANSLATIONS = {
     "hero.tagline": "35 marathons.<br>35 days.",
     "hero.lead": "1,500 km across Italy for people living with depression.",
     "hero.photoAlt": "Dominik Wędzina with a finisher medal in front of the Colosseum in Rome",
+    "hero.mapAria": "Map of Italy with the route from Melito di Porto Salvo to Como",
+    "hero.mapStart": "START · MELITO",
+    "hero.mapFinish": "FINISH · COMO",
+    "hero.polaroid": "That's me 👋",
 
     "countdown.before": "Start in",
     "countdown.days": "days",
@@ -151,6 +155,10 @@ const TRANSLATIONS = {
     "hero.tagline": "35 maratonów.<br>35 dni.",
     "hero.lead": "1500 km przez Włochy dla osób chorujących na depresję.",
     "hero.photoAlt": "Dominik Wędzina z medalem na mecie przed Koloseum w Rzymie",
+    "hero.mapAria": "Mapa Włoch z trasą z Melito di Porto Salvo do Como",
+    "hero.mapStart": "START · MELITO",
+    "hero.mapFinish": "META · COMO",
+    "hero.polaroid": "To ja 👋",
 
     "countdown.before": "Start za",
     "countdown.days": "dni",
@@ -286,6 +294,10 @@ const TRANSLATIONS = {
     "hero.tagline": "35 maratone.<br>35 giorni.",
     "hero.lead": "1.500 km attraverso l'Italia per le persone che vivono con la depressione.",
     "hero.photoAlt": "Dominik Wędzina con la medaglia da finisher davanti al Colosseo a Roma",
+    "hero.mapAria": "Mappa dell'Italia con il percorso da Melito di Porto Salvo a Como",
+    "hero.mapStart": "PARTENZA · MELITO",
+    "hero.mapFinish": "ARRIVO · COMO",
+    "hero.polaroid": "Sono io 👋",
 
     "countdown.before": "Si parte tra",
     "countdown.days": "giorni",
