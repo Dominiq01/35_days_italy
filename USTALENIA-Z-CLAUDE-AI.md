@@ -185,6 +185,6 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - zdanie warunkowe: „Jeśli uda mi się zebrać wszystko, czego potrzebuję na wyprawę, chcę przebiec te 35 maratonów dla Fundacji Twarze Depresji.”
 - Uwaga językowa: zdań od „Że…” (parcelacja) unikamy na stronie. W mowie, np. w filmie, są w porządku.
 - **Nowa część 4 skryptu wideo („Dlaczego”)** zastępuje tę z punktu 4:
-  > Dlaczego? Bo chcę udowodnić, że jak się czegoś bardzo chce i ciężko na to pracuje, to można to osiągnąć. Że każdy może pomagać na swój sposób i przy okazji spełniać marzenia. Że warto doceniać to, że jesteśmy zdrowi. I że nigdy nie wolno się poddawać, nawet jak nie masz planu na życie.
+  > Dlaczego? Bo chcę udowodnić, że jak się czegoś bardzo chce i ciężko na to pracuje, to można to osiągnąć. Że każdy może pomagać na swój sposób i przy okazji spełniać marzenia. I że nigdy nie wolno się poddawać, nawet jak nie masz planu na życie.
   >
-  > I to ostatnie jest dla mnie najważniejsze. Widzę wokół siebie dużo osób, które zmagały się z depresją albo zmagają się z nią cały czas. Chcę, żeby więcej ludzi o tym usłyszało, a ci, którzy chorują, wiedzieli, że nie są sami. I jeśli uda mi się zebrać sprzęt, pobiegnę dla Fundacji Twarze Depresji.
+  > I ten ostatni powód jest dla mnie najważniejszy. Widzę wokół siebie dużo osób, które zmagały się z depresją albo zmagają się z nią cały czas. Chcę, żeby więcej ludzi o tym usłyszało, a ci, którzy chorują, wiedzieli, że nie są sami. I jeśli uda mi się zebrać sprzęt, pobiegnę dla Fundacji Twarze Depresji.
