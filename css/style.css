@@ -115,7 +115,7 @@ p { margin: 0 0 1em; }
 }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 20px; }
 .wordmark { display: flex; align-items: center; text-decoration: none; }
-.wordmark img { display: block; width: auto; height: calc(var(--header-h) - 24px); }  /* full logo, 542×350 */
+.wordmark img { display: block; width: auto; height: calc(var(--header-h) - 24px); }  /* ITALY35 logo, 543×214 */
 .wordmark-footer img { height: 84px; }
 
 .wordmark, .header-actions, .main-nav a, .header-donate { white-space: nowrap; flex-shrink: 0; }

@@ -126,3 +126,10 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - `italy35-logo-kwadrat-ciemny.svg` i `italy35-logo-kwadrat-1080px.png`: ikona, social media. Można z niego zrobić favicon.
   - `italy35-logo-jednokolorowe-biale.svg` i `…-czarne.svg`: do nadruku.
 - Logo jest dość wysokie (napis + linia + CHALLENGE). W wąskim pasku nagłówka może być za małe. W razie potrzeby zapytać Dominika, czy w nagłówku wystarczy sam napis „ITALY35” w stylu logo, a pełne logo zostawić np. w hero lub stopce.
+
+## 7. Zmiana nazwy na ITALY35 (03.11.2026)
+
+- **Nazwa marki: ITALY35** (bez „Challenge”). „Challenge” zostaje tylko w hashtagu **#Italy35Challenge**.
+- Nowe logo w `img/logo/` (te same nazwy plików, nadpisane): ITALY35 + linia trasy pod spodem, kończąca się czerwoną kropką pod „35”, bez napisu CHALLENGE. Proporcje 543×214, czyli niższe i szersze niż poprzednie, więc w nagłówku jest większe i czytelniejsze.
+- Tytuł strony: „ITALY35 · 35 maratonów. 35 dni.”, og:title po angielsku, alt logo „ITALY35”.
+- Nadal do decyzji Dominika: nazwa fundacji w meta description i na stronie (punkt 2).
