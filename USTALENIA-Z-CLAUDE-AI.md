@@ -175,3 +175,16 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - etykiety na mapie: `hero.mapStart`, `hero.mapFinish`, opis dla czytników `hero.mapAria`.
 - Ścieżki SVG są wygenerowane z GPX i Natural Earth. Przy zmianie trasy trzeba je przeliczyć (Claude na claude.ai ma do tego skrypt).
 - Siatka hero: `grid-template-columns: 1fr 1fr` (było 1.15fr 0.85fr).
+
+## 12. Nowa historia „Dlaczego biegnę” i skrypt wideo (03.11.2026)
+
+- `about.story` (PL/IT/EN) przepisana:
+  - wstęp Dominika („Cześć! Jestem Dominik…”),
+  - cztery powody: ciężka praca, pomaganie na swój sposób, docenianie zdrowia, nie poddawać się nawet bez planu na życie,
+  - przejście „Ten ostatni powód jest mi szczególnie bliski” do depresji,
+  - zdanie warunkowe: „Jeśli uda mi się zebrać wszystko, czego potrzebuję na wyprawę, chcę przebiec te 35 maratonów dla Fundacji Twarze Depresji.”
+- Uwaga językowa: zdań od „Że…” (parcelacja) unikamy na stronie. W mowie, np. w filmie, są w porządku.
+- **Nowa część 4 skryptu wideo („Dlaczego”)** zastępuje tę z punktu 4:
+  > Dlaczego? Bo chcę udowodnić, że jak się czegoś bardzo chce i ciężko na to pracuje, to można to osiągnąć. Że każdy może pomagać na swój sposób i przy okazji spełniać marzenia. Że warto doceniać to, że jesteśmy zdrowi. I że nigdy nie wolno się poddawać, nawet jak nie masz planu na życie.
+  >
+  > I to ostatnie jest dla mnie najważniejsze. Widzę wokół siebie dużo osób, które zmagały się z depresją albo zmagają się z nią cały czas. Chcę, żeby więcej ludzi o tym usłyszało, a ci, którzy chorują, wiedzieli, że nie są sami. I jeśli uda mi się zebrać sprzęt, pobiegnę dla Fundacji Twarze Depresji.
