@@ -144,3 +144,14 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - klucze `donate.*`, `nav.donate`, `cta.donate`, `cta.donateNow` z `i18n.js`.
 - Gdyby zbiórka wróciła: odtworzyć z historii gita (commit przed tym).
 - Zdanie `foundation.note` („Pieniądze ze zbiórki trafiają bezpośrednio do fundacji…”) usunięte z kafelka (03.11), bo zbiórki nie ma.
+
+## 9. Formularz kontaktowy (03.11.2026)
+
+- Hosting: **Netlify** (decyzja Dominika). Formularz działa przez **Netlify Forms**.
+- `<form name="kontakt" data-netlify="true" netlify-honeypot="bot-field">` w karcie kontaktu. Pod formularzem e-mail z przyciskiem „Kopiuj” jako alternatywa.
+- **Pola:** imię i nazwisko, e-mail, lista „W czym możesz pomóc?” (kamper, prowadzenie kampera, buty i sprzęt, jedzenie i odżywki, wsparcie finansowe, coś innego), wiadomość. Wszystkie wymagane. Pod spodem notka o danych.
+- **Antyspam:** Akismet od Netlify (domyślnie) + ukryte pole-pułapka `bot-field`. reCAPTCHA nie jest włączona; można dodać `data-netlify-recaptcha="true"`, jeśli spam się pojawi.
+- **Wysyłka:** `fetch("/")` w `initContactForm()` w `main.js`, komunikaty w 3 językach (`contact.form.*`). Lokalnie i poza Netlify wysyłka kończy się komunikatem błędu z prośbą o kontakt mailowy. To normalne.
+- **Po wdrożeniu na Netlify:**
+  - w panelu Forms włączyć wykrywanie formularzy („Enable form detection”), jeśli jest wyłączone, i zrobić ponowny deploy,
+  - ustawić powiadomienia e-mail na adres Dominika (Forms → Form notifications).

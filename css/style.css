@@ -413,3 +413,23 @@ p { margin: 0 0 1em; }
 .copyright { color: rgba(255,255,255,.45); font-size: 0.85rem; margin: 0 auto; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ============ Contact form ============ */
+.contact-form { display: grid; gap: 16px; margin-top: 20px; }
+.form-row { display: grid; gap: 6px; }
+.form-row label { font-family: var(--font-display); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.contact-form input, .contact-form select, .contact-form textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--paper); border: 1px solid #c9ced5; border-radius: 8px; padding: 12px 14px;
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.contact-form .btn { justify-self: start; }
+.contact-form .btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.form-note { margin: 0; font-size: 0.85rem; color: var(--ink-soft); }
+.form-status { margin: 0; font-weight: 700; }
+.form-status.is-ok { color: var(--green); }
+.form-status.is-error { color: var(--accent-dark); }
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.contact-or { margin: 28px 0 0; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.95rem; }
+.contact-or + .channels { margin-top: 8px; }

@@ -117,7 +117,25 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Phone",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copy",
-    "contact.copied": "Copied"
+    "contact.copied": "Copied",
+    "contact.form.name": "Name",
+    "contact.form.email": "Email",
+    "contact.form.help": "How can you help?",
+    "contact.form.helpPick": "Choose…",
+    "contact.form.optCamper": "Camper van",
+    "contact.form.optDriver": "Driving the camper",
+    "contact.form.optGear": "Shoes and running gear",
+    "contact.form.optFood": "Food and nutrition",
+    "contact.form.optMoney": "Financial support",
+    "contact.form.optOther": "Something else",
+    "contact.form.message": "Message",
+    "contact.form.privacy": "I'll only use your details to reply to your message.",
+    "contact.form.send": "Send message",
+    "contact.form.sending": "Sending…",
+    "contact.form.success": "Thank you! Your message has been sent. I'll get back to you soon.",
+    "contact.form.error": "The message couldn't be sent. Please try again or write to me directly by email.",
+    "contact.form.invalid": "Please fill in all fields and check your email address.",
+    "contact.form.or": "Or write to me directly:"
   },
 
   pl: {
@@ -234,7 +252,25 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Telefon",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Kopiuj",
-    "contact.copied": "Skopiowano"
+    "contact.copied": "Skopiowano",
+    "contact.form.name": "Imię i nazwisko",
+    "contact.form.email": "E-mail",
+    "contact.form.help": "W czym możesz pomóc?",
+    "contact.form.helpPick": "Wybierz…",
+    "contact.form.optCamper": "Kamper",
+    "contact.form.optDriver": "Prowadzenie kampera",
+    "contact.form.optGear": "Buty i sprzęt biegowy",
+    "contact.form.optFood": "Jedzenie i odżywki",
+    "contact.form.optMoney": "Wsparcie finansowe",
+    "contact.form.optOther": "Coś innego",
+    "contact.form.message": "Wiadomość",
+    "contact.form.privacy": "Twoje dane wykorzystam wyłącznie do odpowiedzi na wiadomość.",
+    "contact.form.send": "Wyślij wiadomość",
+    "contact.form.sending": "Wysyłam…",
+    "contact.form.success": "Dziękuję! Wiadomość została wysłana. Odezwę się wkrótce.",
+    "contact.form.error": "Nie udało się wysłać wiadomości. Spróbuj ponownie albo napisz do mnie bezpośrednio na e-mail.",
+    "contact.form.invalid": "Uzupełnij wszystkie pola i sprawdź adres e-mail.",
+    "contact.form.or": "Albo napisz do mnie bezpośrednio:"
   },
 
   it: {
@@ -351,7 +387,25 @@ const TRANSLATIONS = {
     "contact.phoneLabel": "Telefono",
     "contact.whatsappLabel": "WhatsApp",
     "contact.copy": "Copia",
-    "contact.copied": "Copiato"
+    "contact.copied": "Copiato",
+    "contact.form.name": "Nome e cognome",
+    "contact.form.email": "Email",
+    "contact.form.help": "Come puoi aiutare?",
+    "contact.form.helpPick": "Scegli…",
+    "contact.form.optCamper": "Camper",
+    "contact.form.optDriver": "Guidare il camper",
+    "contact.form.optGear": "Scarpe e attrezzatura da corsa",
+    "contact.form.optFood": "Cibo e integratori",
+    "contact.form.optMoney": "Supporto economico",
+    "contact.form.optOther": "Altro",
+    "contact.form.message": "Messaggio",
+    "contact.form.privacy": "Userò i tuoi dati solo per rispondere al tuo messaggio.",
+    "contact.form.send": "Invia messaggio",
+    "contact.form.sending": "Invio in corso…",
+    "contact.form.success": "Grazie! Il messaggio è stato inviato. Ti risponderò presto.",
+    "contact.form.error": "Non è stato possibile inviare il messaggio. Riprova o scrivimi direttamente via email.",
+    "contact.form.invalid": "Compila tutti i campi e controlla l'indirizzo email.",
+    "contact.form.or": "Oppure scrivimi direttamente:"
   }
 };
 

@@ -326,6 +326,40 @@ function initCopyButtons() {
   });
 }
 
+/* Contact form: Netlify Forms (data-netlify + honeypot), sent with fetch so the visitor stays on the page */
+function initContactForm() {
+  const form = $("#contact-form");
+  if (!form) return;
+  const status = $("#cf-status");
+  const button = form.querySelector('button[type="submit"]');
+  const show = (key, ok) => {
+    status.textContent = I18N.t(key);
+    status.classList.toggle("is-error", !ok);
+    status.classList.toggle("is-ok", !!ok);
+    status.hidden = false;
+  };
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      show("contact.form.invalid", false);
+      const bad = form.querySelector(":invalid");
+      if (bad) bad.focus();
+      return;
+    }
+    button.disabled = true;
+    show("contact.form.sending", true);
+    const body = new URLSearchParams(new FormData(form)).toString();
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
+      .then((r) => {
+        if (!r.ok) throw new Error(r.status);
+        form.reset();
+        show("contact.form.success", true);
+      })
+      .catch(() => show("contact.form.error", false))
+      .finally(() => { button.disabled = false; });
+  });
+}
+
 /* ---------- boot ---------- */
 document.addEventListener("langchange", () => {
   renderCountdown();
@@ -343,6 +377,7 @@ I18N.init();
 initNav();
 initReveal();
 initCopyButtons();
+initContactForm();
 RouteMap.init();
 $("#show-all").addEventListener("click", () => RouteMap.showAll());
 setInterval(renderCountdown, 1000);

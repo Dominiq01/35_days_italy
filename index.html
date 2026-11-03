@@ -271,6 +271,40 @@
         <div class="contact-card">
           <h3 data-i18n="contact.title">Let's talk</h3>
           <p data-i18n="contact.lead">Write to me. I reply personally, usually the same day.</p>
+          <form class="contact-form" id="contact-form" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="kontakt">
+            <p class="hp-field" aria-hidden="true">
+              <label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+            <div class="form-row">
+              <label for="cf-name" data-i18n="contact.form.name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120">
+            </div>
+            <div class="form-row">
+              <label for="cf-email" data-i18n="contact.form.email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
+            </div>
+            <div class="form-row">
+              <label for="cf-help" data-i18n="contact.form.help">How can you help?</label>
+              <select id="cf-help" name="help" required>
+                <option value="" selected disabled data-i18n="contact.form.helpPick">Choose…</option>
+                <option value="kamper" data-i18n="contact.form.optCamper">Camper van</option>
+                <option value="kierowca" data-i18n="contact.form.optDriver">Driving the camper</option>
+                <option value="sprzet" data-i18n="contact.form.optGear">Shoes and running gear</option>
+                <option value="jedzenie" data-i18n="contact.form.optFood">Food and nutrition</option>
+                <option value="finansowo" data-i18n="contact.form.optMoney">Financial support</option>
+                <option value="inne" data-i18n="contact.form.optOther">Something else</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="cf-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required maxlength="4000"></textarea>
+            </div>
+            <p class="form-note" data-i18n="contact.form.privacy">I'll only use your details to reply to your message.</p>
+            <button type="submit" class="btn btn-accent" data-i18n="contact.form.send">Send message</button>
+            <p class="form-status" id="cf-status" role="status" aria-live="polite" hidden></p>
+          </form>
+          <p class="contact-or" data-i18n="contact.form.or">Or write to me directly:</p>
           <dl class="channels">
             <div class="channel"><dt data-i18n="contact.emailLabel">Email</dt><dd data-config="email">dominik.wedzina@onet.pl</dd><button type="button" class="copy-btn" data-copy="email" data-i18n="contact.copy">Copy</button></div>
             <div class="channel" data-config-if="phone"><dt data-i18n="contact.phoneLabel">Phone</dt><dd data-config="phone"></dd><button type="button" class="copy-btn" data-copy="phone" data-i18n="contact.copy">Copy</button></div>
