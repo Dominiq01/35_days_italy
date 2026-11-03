@@ -143,4 +143,4 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - kod wpłat w `main.js` (`renderDonate`, `donateUrl`, `goalPln`, `raisedPln`, `kmPricePln`, `data-donate-only`),
   - klucze `donate.*`, `nav.donate`, `cta.donate`, `cta.donateNow` z `i18n.js`.
 - Gdyby zbiórka wróciła: odtworzyć z historii gita (commit przed tym).
-- Do decyzji: w kafelku jest zdanie `foundation.note` „Pieniądze ze zbiórki trafiają bezpośrednio do fundacji, nie do mnie”, a zbiórki nie ma.
+- Zdanie `foundation.note` („Pieniądze ze zbiórki trafiają bezpośrednio do fundacji…”) usunięte z kafelka (03.11), bo zbiórki nie ma.
