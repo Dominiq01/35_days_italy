@@ -458,3 +458,12 @@ p { margin: 0 0 1em; }
 .hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .contact-or { margin: 28px 0 0; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.95rem; }
 .contact-or + .channels { margin-top: 8px; }
+
+/* ============ Contact: static route map ============ */
+.contact-map { margin: 32px 0 0; max-width: 420px; }
+.contact-map svg { display: block; width: 100%; height: auto; overflow: visible; }
+.contact-map-land { fill: var(--paper); stroke: #c9ced5; stroke-width: 1.2; stroke-linejoin: round; }
+.contact-map-route { fill: none; stroke: var(--accent); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.contact-map-start { fill: var(--green); stroke: #fff; stroke-width: 3; }
+.contact-map-finish { fill: var(--accent); stroke: #fff; stroke-width: 3; }
+.contact-map-label { font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; fill: var(--ink); }
