@@ -7,12 +7,9 @@ const TRANSLATIONS = {
     "nav.about": "About",
     "nav.challenge": "Challenge",
     "nav.route": "Route",
-    "nav.donate": "Donate",
     "nav.partners": "Partners",
     "nav.contact": "Contact",
 
-    "cta.donate": "Donate",
-    "cta.donateNow": "Donate now",
     "cta.route": "See the route",
     "cta.partner": "Become a partner",
 
@@ -57,15 +54,6 @@ const TRANSLATIONS = {
     "route.finish": "Finish",
     "route.error": "The route couldn't be loaded. If you opened the file directly, start a local server (see README).",
 
-    "donate.kicker": "Support the run",
-    "donate.title": "Every kilometre counts",
-    "donate.lead": "Your donation goes straight to Fundacja Twarze Depresji. Pick a kilometre, a whole marathon, or any amount you like.",
-    "donate.raised": "raised",
-    "donate.goal": "goal",
-    "donate.tierKm": "sponsors 1 kilometre",
-    "donate.tierMarathon": "sponsors a whole marathon",
-    "donate.tierAny": "Any amount",
-    "donate.tierAnyText": "keeps me going",
 
     "partners.kicker": "Partners",
     "partners.title": "Become a partner of my run",
@@ -137,12 +125,9 @@ const TRANSLATIONS = {
     "nav.about": "O mnie",
     "nav.challenge": "Wyzwanie",
     "nav.route": "Trasa",
-    "nav.donate": "Wesprzyj",
     "nav.partners": "Partnerzy",
     "nav.contact": "Kontakt",
 
-    "cta.donate": "Wesprzyj",
-    "cta.donateNow": "Wesprzyj teraz",
     "cta.route": "Zobacz trasę",
     "cta.partner": "Zostań partnerem",
 
@@ -187,15 +172,6 @@ const TRANSLATIONS = {
     "route.finish": "Meta",
     "route.error": "Nie udało się wczytać trasy. Jeśli otwierasz plik bezpośrednio, uruchom lokalny serwer (zobacz README).",
 
-    "donate.kicker": "Wesprzyj bieg",
-    "donate.title": "Każdy kilometr się liczy",
-    "donate.lead": "Twoja wpłata trafia bezpośrednio do Fundacji Twarze Depresji. Wybierz kilometr, cały maraton albo dowolną kwotę.",
-    "donate.raised": "zebrano",
-    "donate.goal": "cel",
-    "donate.tierKm": "to jeden kilometr",
-    "donate.tierMarathon": "to cały maraton",
-    "donate.tierAny": "Dowolna kwota",
-    "donate.tierAnyText": "doda mi sił",
 
     "partners.kicker": "Partnerzy",
     "partners.title": "Zostań partnerem mojego biegu",
@@ -267,12 +243,9 @@ const TRANSLATIONS = {
     "nav.about": "Chi sono",
     "nav.challenge": "La sfida",
     "nav.route": "Percorso",
-    "nav.donate": "Dona",
     "nav.partners": "Partner",
     "nav.contact": "Contatti",
 
-    "cta.donate": "Dona",
-    "cta.donateNow": "Dona ora",
     "cta.route": "Vedi il percorso",
     "cta.partner": "Diventa partner",
 
@@ -317,15 +290,6 @@ const TRANSLATIONS = {
     "route.finish": "Arrivo",
     "route.error": "Impossibile caricare il percorso. Se hai aperto il file direttamente, avvia un server locale (vedi README).",
 
-    "donate.kicker": "Sostieni la corsa",
-    "donate.title": "Ogni chilometro conta",
-    "donate.lead": "La tua donazione va direttamente alla Fondazione Twarze Depresji. Scegli un chilometro, una maratona intera o l'importo che preferisci.",
-    "donate.raised": "raccolti",
-    "donate.goal": "obiettivo",
-    "donate.tierKm": "sostengono 1 chilometro",
-    "donate.tierMarathon": "sostengono un'intera maratona",
-    "donate.tierAny": "Qualsiasi importo",
-    "donate.tierAnyText": "mi dà la carica",
 
     "partners.kicker": "Partner",
     "partners.title": "Diventa partner della mia corsa",

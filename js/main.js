@@ -8,11 +8,7 @@ const CONFIG = {
   email: "dominik.wedzina@onet.pl",
   phone: null,                                 // null hides the row in Contact
   whatsapp: null,                              // null hides the row in Contact
-  donateUrl: null,                             // fundraiser link from the foundation; while null, the Donate section and menu link stay hidden
   foundationUrl: "https://twarzedepresji.pl",
-  goalPln: 35000,                              // set to null to hide the progress bar
-  raisedPln: 0,                                // update as donations come in
-  kmPricePln: 10,                              // "sponsor 1 km" amount
   hashtag: "#Italy35Challenge",
   social: {
     instagram: "https://www.instagram.com/dominik.wedzina/",
@@ -47,21 +43,7 @@ function applyConfig() {
   });
   // Optional contact rows / social links disappear when their CONFIG value is null
   document.querySelectorAll("[data-config-if]").forEach((el) => { el.hidden = !getPath(CONFIG, el.dataset.configIf); });
-  // Donate section and menu links appear only once there is a fundraiser link
-  document.querySelectorAll("[data-donate-only]").forEach((el) => { el.hidden = !CONFIG.donateUrl; });
   $("#year").textContent = new Date().getFullYear();
-}
-
-function renderDonate() {
-  $('[data-tier="km"]').textContent = fmt(CONFIG.kmPricePln);
-  $('[data-tier="marathon"]').textContent = fmt(Math.round(CONFIG.kmPricePln * 42.195));
-
-  if (!CONFIG.goalPln) return;
-  $("#progress").hidden = false;
-  $("#raised").textContent = fmt(CONFIG.raisedPln || 0);
-  $("#goal").textContent = fmt(CONFIG.goalPln);
-  const pct = Math.min(100, ((CONFIG.raisedPln || 0) / CONFIG.goalPln) * 100);
-  requestAnimationFrame(() => { $("#progress-fill").style.width = `${pct}%`; });
 }
 
 /* ---------- countdown ---------- */
@@ -348,7 +330,6 @@ function initCopyButtons() {
 document.addEventListener("langchange", () => {
   renderCountdown();
   showSubtitles();
-  renderDonate();
   if (RouteMap.stages.length) {
     RouteMap.renderList();
     RouteMap.renderLabels();

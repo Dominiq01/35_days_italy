@@ -133,3 +133,14 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
 - Nowe logo w `img/logo/` (te same nazwy plików, nadpisane): ITALY35 + linia trasy pod spodem, kończąca się czerwoną kropką pod „35”, bez napisu CHALLENGE. Proporcje 543×214, czyli niższe i szersze niż poprzednie, więc w nagłówku jest większe i czytelniejsze.
 - Tytuł strony: „ITALY35 · 35 maratonów. 35 dni.”, og:title po angielsku, alt logo „ITALY35”.
 - Nadal do decyzji Dominika: nazwa fundacji w meta description i na stronie (punkt 2).
+
+## 8. Fundacja usunięta ze strony, poza kafelkiem (03.11.2026)
+
+- Decyzja Dominika: na razie usuwamy wszystko, co wiąże stronę z Fundacją Twarze Depresji, **poza kafelkiem o fundacji** w sekcji „Dlaczego biegnę”. Kafelek zostaje bez zmian.
+- Usunięte:
+  - nazwa fundacji z `meta description` i `og:description` (teraz „for people living with depression”),
+  - cała sekcja wpłat (`#donate`) i linki „Wesprzyj” w menu i stopce,
+  - kod wpłat w `main.js` (`renderDonate`, `donateUrl`, `goalPln`, `raisedPln`, `kmPricePln`, `data-donate-only`),
+  - klucze `donate.*`, `nav.donate`, `cta.donate`, `cta.donateNow` z `i18n.js`.
+- Gdyby zbiórka wróciła: odtworzyć z historii gita (commit przed tym).
+- Do decyzji: w kafelku jest zdanie `foundation.note` „Pieniądze ze zbiórki trafiają bezpośrednio do fundacji, nie do mnie”, a zbiórki nie ma.
