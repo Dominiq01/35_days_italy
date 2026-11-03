@@ -180,7 +180,7 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
 
 - `about.story` (PL/IT/EN) przepisana:
   - wstęp Dominika („Cześć! Jestem Dominik…”),
-  - cztery powody: ciężka praca, pomaganie na swój sposób, docenianie zdrowia, nie poddawać się nawet bez planu na życie,
+  - trzy powody: ciężka praca, pomaganie na swój sposób, nie poddawać się nawet bez planu na życie (zdanie o docenianiu zdrowia usunięte 03.11 na prośbę Dominika),
   - przejście „Ten ostatni powód jest mi szczególnie bliski” do depresji,
   - zdanie warunkowe: „Jeśli uda mi się zebrać wszystko, czego potrzebuję na wyprawę, chcę przebiec te 35 maratonów dla Fundacji Twarze Depresji.”
 - Uwaga językowa: zdań od „Że…” (parcelacja) unikamy na stronie. W mowie, np. w filmie, są w porządku.
