@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     "countdown.after": "Finished. Thank you!",
 
     "challenge.kicker": "The challenge",
-    "challenge.title": "One country. One marathon a day.",
+    "challenge.title": "One day. One marathon.",
 
     "stats.days": "days",
     "stats.marathons": "marathons",
@@ -170,7 +170,7 @@ const TRANSLATIONS = {
     "countdown.after": "Meta. Dziękuję!",
 
     "challenge.kicker": "Wyzwanie",
-    "challenge.title": "Jeden kraj. Maraton dziennie.",
+    "challenge.title": "Jeden dzień. Jeden maraton.",
 
     "stats.days": "dni",
     "stats.marathons": "maratonów",
@@ -309,7 +309,7 @@ const TRANSLATIONS = {
     "countdown.after": "Traguardo. Grazie!",
 
     "challenge.kicker": "La sfida",
-    "challenge.title": "Un Paese. Una maratona al giorno.",
+    "challenge.title": "Un giorno. Una maratona.",
 
     "stats.days": "giorni",
     "stats.marathons": "maratone",
