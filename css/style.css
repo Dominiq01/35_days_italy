@@ -257,6 +257,17 @@ p { margin: 0 0 1em; }
   border-radius: var(--radius); overflow: hidden; background: var(--ink);
   box-shadow: 0 24px 48px rgba(0,0,0,.18);
 }
+.about-video { position: relative; }
+.video-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 84px; height: 84px; border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--accent); box-shadow: 0 10px 30px rgba(214,38,59,.45);
+  display: grid; place-items: center; transition: transform .2s ease;
+}
+.video-play[hidden] { display: none; }
+.video-play svg { width: 38px; height: 38px; fill: #fff; margin-left: 5px; }
+.video-play:hover { transform: translate(-50%, -50%) scale(1.07); }
+.video-play:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 .about-video video { display: block; width: 100%; height: 100%; object-fit: cover; background: #000; }
 .video-soon {
   height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;

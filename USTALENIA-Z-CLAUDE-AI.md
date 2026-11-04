@@ -188,3 +188,14 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   > Dlaczego? Bo chcę udowodnić, że jak się czegoś bardzo chce i ciężko na to pracuje, to można to osiągnąć. Że każdy może pomagać na swój sposób i przy okazji spełniać marzenia. I że nigdy nie wolno się poddawać, nawet jak nie masz planu na życie.
   >
   > I ten ostatni powód jest dla mnie najważniejszy. Widzę wokół siebie dużo osób, które zmagały się z depresją albo zmagają się z nią cały czas. Chcę, żeby więcej ludzi o tym usłyszało, a ci, którzy chorują, wiedzieli, że nie są sami. I jeśli uda mi się zebrać sprzęt, pobiegnę dla Fundacji Twarze Depresji.
+
+## 13. Film na stronie (04.11.2026)
+
+- Gotowy film Dominika jest w sekcji „Dlaczego biegnę”: `video/about.mp4` (87 s, 1080×1920, H.264 + AAC 128k, ok. 29 MB, `+faststart`; oryginał z montażu miał 107 MB).
+  - Głośność lekko wyrównana: ok. -17 LUFS, szczyt -1,3 dBTP (oryginał miał szczyt -0,1 dBTP).
+  - Poster: `video/about-poster.jpg`, klatka z 1,5 s (bieg, bez napisu).
+- **Napisy PL są wtopione w obraz.** Dlatego `CONFIG.aboutVideo.subtitles` jest pusty (`{}`): bez plików `.vtt`, żeby nie było 404 ani podwójnych napisów.
+- Na stronie IT i EN film na razie też ma polskie napisy. Jak zrobić wersje IT/EN, jeszcze nie ustalone. Opcje:
+  - osobne pliki wideo z wtopionymi napisami,
+  - albo wersja bez napisów + `.vtt` przełączane z językiem.
+- Nad posterem jest duży czerwony przycisk odtwarzania (`.video-play`, etykieta `about.videoPlay`). Znika po starcie, wraca po końcu filmu; resztę obsługują natywne kontrolki.

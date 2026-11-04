@@ -17,9 +17,9 @@ const CONFIG = {
   },
   gpxPath: "gpx/route.gpx",
   aboutVideo: {
-    src: null,                                 // e.g. "video/about.mp4" (vertical 9:16); while null a "coming soon" placeholder is shown
-    poster: null,                              // optional still frame, e.g. "video/about-poster.jpg"
-    subtitles: { pl: "video/about-pl.vtt", en: "video/about-en.vtt", it: "video/about-it.vtt" }
+    src: "video/about.mp4",                    // vertical 9:16; null shows the "coming soon" placeholder
+    poster: "video/about-poster.jpg",
+    subtitles: {}                              // PL captions are burned into the video (04.11.2026); IT/EN still to decide, e.g. { it: "video/about-it.vtt" }
   }
 };
 
@@ -93,6 +93,12 @@ function initAboutVideo() {
   });
   video.hidden = false;
   $(".about-video .video-soon").hidden = true;
+  // Big play button over the poster; native controls take over once it plays
+  const play = $(".about-video .video-play");
+  play.hidden = false;
+  play.addEventListener("click", () => video.play());
+  video.addEventListener("play", () => { play.hidden = true; });
+  video.addEventListener("ended", () => { play.hidden = false; });
   showSubtitles();
 }
 

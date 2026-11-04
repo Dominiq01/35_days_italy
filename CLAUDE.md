@@ -51,9 +51,9 @@ Strona (landing page) charytatywnego biegu: Dominik biegnie maraton (42,2 km) dz
 - [x] Historia `about.story` w `js/i18n.js` (02.11.2026, z faktów w `USTALENIA-Z-CLAUDE-AI.md`; do akceptacji przez Dominika)
 - Fundacja: Dominik nie chce się z nią na razie wiązać, ale nazwa na stronie zostaje bez zmian (decyzja 02.11.2026). Hashtag: `#Italy35Challenge` (decyzja 02.11.2026, wcześniej `#35DaysAcrossItaly`). Nazwa projektu: **Italy35 Challenge**. Logo (`img/logo/`, opis w `USTALENIA-Z-CLAUDE-AI.md` pkt 6) w nagłówku i stopce; pasek nagłówka podniesiony do 84 px (72 px poniżej 768 px), żeby pełne logo było większe (decyzja Dominika). Favicon: `italy35-logo-kwadrat-ciemny.svg`.
 - [x] Zdjęcie w hero (22.10.2026): zdjęcie spod Koloseum z medalem, oryginał `img/hero.heic`, na stronie `img/hero.jpg` + `hero-800.jpg`
-- [ ] Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
+- [x] (04.11.2026: `video/about.mp4` z wtopionymi napisami PL, szczegóły w `USTALENIA-Z-CLAUDE-AI.md` pkt 13; wersje IT/EN do ustalenia) Wgrać film do sekcji „Dlaczego biegnę”: **pionowy 9:16, plik MP4 na stronie (nie YouTube)**, decyzja Dominika. `video/about.mp4` + napisy `video/about-{pl,en,it}.vtt`, ustawić `CONFIG.aboutVideo.src`. Do tego czasu zaślepka „Film już wkrótce” (zdjęcie `img/about.svg` usunięte)
 - [ ] Pokazać fundacji opis i zapytać o zgodę na użycie nazwy/logo (`foundationUrl` poprawiony na twarzedepresji.pl)
-- [ ] Nagrać film 60–90 s „kim jestem i dlaczego biegnę” (skrypt do przygotowania)
+- [x] Nagrać film 60–90 s „kim jestem i dlaczego biegnę” (04.11.2026: gotowy, 87 s)
 - [ ] Korekta tekstów PL i IT przez native speakera
 - [ ] Deploy (Netlify/Vercel)
 
