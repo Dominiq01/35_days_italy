@@ -195,7 +195,8 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
   - Głośność lekko wyrównana: ok. -17 LUFS, szczyt -1,3 dBTP (oryginał miał szczyt -0,1 dBTP).
   - Poster: `video/about-poster.jpg`, klatka z 1,5 s (bieg, bez napisu).
 - **Napisy PL są wtopione w obraz.** Dlatego `CONFIG.aboutVideo.subtitles` jest pusty (`{}`): bez plików `.vtt`, żeby nie było 404 ani podwójnych napisów.
-- Na stronie IT i EN film na razie też ma polskie napisy. Jak zrobić wersje IT/EN, jeszcze nie ustalone. Opcje:
-  - osobne pliki wideo z wtopionymi napisami,
-  - albo wersja bez napisów + `.vtt` przełączane z językiem.
+- **Wersja włoska (04.11.2026):** `video/about-it.mp4`, ten sam montaż z wtopionymi napisami IT, te same ustawienia kompresji i ten sam poster.
+  - `CONFIG.aboutVideo.src` to teraz obiekt `{ pl, it, default }`. Przy zmianie języka `swapVideoForLang()` podmienia plik, zachowując miejsce w filmie i to, czy film grał.
+  - Strona EN na razie dostaje wersję PL (`default`). Gdy będzie wersja EN: dodać `en: "video/about-en.mp4"`.
+  - Uwaga: we wstawce z mapą w wersji IT zostały polskie napisy na grafice („TRASA”, „META”, „35 DNI”, „Rzym”, „Bolonia”, „Florencja”, „Sienna”).
 - Nad posterem jest duży czerwony przycisk odtwarzania (`.video-play`, etykieta `about.videoPlay`). Znika po starcie, wraca po końcu filmu; resztę obsługują natywne kontrolki.

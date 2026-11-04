@@ -17,9 +17,10 @@ const CONFIG = {
   },
   gpxPath: "gpx/route.gpx",
   aboutVideo: {
-    src: "video/about.mp4",                    // vertical 9:16; null shows the "coming soon" placeholder
+    // vertical 9:16, captions burned in; one file per page language, missing languages use "default"; null shows the "coming soon" placeholder
+    src: { pl: "video/about.mp4", it: "video/about-it.mp4", default: "video/about.mp4" },
     poster: "video/about-poster.jpg",
-    subtitles: {}                              // PL captions are burned into the video (04.11.2026); IT/EN still to decide, e.g. { it: "video/about-it.vtt" }
+    subtitles: {}                              // optional .vtt per language, e.g. { en: "video/about-en.vtt" }; empty while captions are burned in
   }
 };
 
@@ -83,7 +84,7 @@ function initAboutVideo() {
   const { src, poster, subtitles } = CONFIG.aboutVideo;
   if (!src) return;  // keep the "coming soon" placeholder
   const video = $(".about-video video");
-  video.src = src;
+  video.src = videoSrcFor(I18N.lang);
   if (poster) video.poster = poster;
   const labels = { pl: "Polski", en: "English", it: "Italiano" };
   Object.entries(subtitles || {}).forEach(([lang, file]) => {
@@ -100,6 +101,23 @@ function initAboutVideo() {
   video.addEventListener("play", () => { play.hidden = true; });
   video.addEventListener("ended", () => { play.hidden = false; });
   showSubtitles();
+}
+
+function videoSrcFor(lang) {
+  const { src } = CONFIG.aboutVideo;
+  return typeof src === "string" ? src : (src[lang] || src.default);
+}
+
+/* Switching language swaps the video file, keeping the position and play state */
+function swapVideoForLang() {
+  if (!CONFIG.aboutVideo.src) return;
+  const video = $(".about-video video");
+  const next = videoSrcFor(I18N.lang);
+  if (video.getAttribute("src") === next) return;
+  const time = video.currentTime, playing = !video.paused && !video.ended;
+  video.src = next;
+  if (time > 0) video.addEventListener("loadedmetadata", () => { video.currentTime = time; }, { once: true });
+  if (playing) video.play().catch(() => {});
 }
 
 /* Subtitles follow the page language */
@@ -374,6 +392,7 @@ function initContactForm() {
 /* ---------- boot ---------- */
 document.addEventListener("langchange", () => {
   renderCountdown();
+  swapVideoForLang();
   showSubtitles();
   if (RouteMap.stages.length) {
     RouteMap.renderList();
