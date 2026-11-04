@@ -18,7 +18,7 @@ const CONFIG = {
   gpxPath: "gpx/route.gpx",
   aboutVideo: {
     // vertical 9:16, captions burned in; one file per page language, missing languages use "default"; null shows the "coming soon" placeholder
-    src: { pl: "video/about.mp4", it: "video/about-it.mp4", default: "video/about.mp4" },
+    src: { pl: "video/about.mp4", it: "video/about-it.mp4", en: "video/about-en.mp4", default: "video/about.mp4" },
     poster: "video/about-poster.jpg",
     subtitles: {}                              // optional .vtt per language, e.g. { en: "video/about-en.vtt" }; empty while captions are burned in
   }

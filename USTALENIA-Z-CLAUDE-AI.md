@@ -197,6 +197,6 @@ Kafel statystyk „42.2 km każdego dnia” nie zgadza się w pełni z trasą: �
 - **Napisy PL są wtopione w obraz.** Dlatego `CONFIG.aboutVideo.subtitles` jest pusty (`{}`): bez plików `.vtt`, żeby nie było 404 ani podwójnych napisów.
 - **Wersja włoska (04.11.2026):** `video/about-it.mp4`, ten sam montaż z wtopionymi napisami IT, te same ustawienia kompresji i ten sam poster.
   - `CONFIG.aboutVideo.src` to teraz obiekt `{ pl, it, default }`. Przy zmianie języka `swapVideoForLang()` podmienia plik, zachowując miejsce w filmie i to, czy film grał.
-  - Strona EN na razie dostaje wersję PL (`default`). Gdy będzie wersja EN: dodać `en: "video/about-en.mp4"`.
-  - Uwaga: we wstawce z mapą w wersji IT zostały polskie napisy na grafice („TRASA”, „META”, „35 DNI”, „Rzym”, „Bolonia”, „Florencja”, „Sienna”).
+  - **Wersja angielska (04.11.2026):** `video/about-en.mp4`, napisy EN, podpięta pod `en`.
+  - Uwaga: we wstawce z mapą w wersjach IT i EN zostały polskie napisy na grafice („TRASA”, „META”, „35 DNI”, „Rzym”, „Bolonia”, „Florencja”, „Sienna”).
 - Nad posterem jest duży czerwony przycisk odtwarzania (`.video-play`, etykieta `about.videoPlay`). Znika po starcie, wraca po końcu filmu; resztę obsługują natywne kontrolki.
